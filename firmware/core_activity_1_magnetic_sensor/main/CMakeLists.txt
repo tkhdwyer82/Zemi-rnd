@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS
+        "src/mlx90393.c"
+        "src/noise_filter.c"
+        "src/pairing_state_machine.c"
+        "tests/test_sensor_firmware.c"
+    INCLUDE_DIRS
+        "include"
+    REQUIRES
+        driver
+        esp_timer
+        freertos
+        log
+)
