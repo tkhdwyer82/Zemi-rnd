@@ -1,1 +1,1 @@
-Hello from Claude Code - first test commit
+Hello from Claudde Code - first test commit
