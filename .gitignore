@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build output
+build/
+*.elf
+*.hex
+*.bin
+*.map
+*.d
+*.o
+
+# nRF5 SDK (checked out separately, not tracked)
+nRF5_SDK_*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
