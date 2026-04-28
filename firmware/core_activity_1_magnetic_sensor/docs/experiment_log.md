@@ -1,111 +1,119 @@
-# Experiment Log — Core Activity 1: 3D Magnetic Sensor
-## Zemi R&D 2026
-
-**Contractor:** Timothy Dwyer (TKD Research and Consulting)  
-**Company:** Zemi Pty Ltd  
-**Activity:** Core Activity 1 — 3D Magnetic Sensor Production-Readiness  
-**ATO R&D Tax Incentive:** Section 355, ITAA 1997  
+# Experiment Log — Core Activity 1: 3D Magnetic Sensor Production-Readiness
+# Zemi R&D 2026 | ATO R&D Tax Incentive Substantiation Record
+# Repo: tkhdwyer82/Zemi-rnd | Path: firmware/core_activity_1_magnetic_sensor/docs/experiment_log.md
 
 ---
 
-## Experiment 1.1 — Noise-Filtering Algorithm Iterations
+## Research Question
+Can the MLX90393 3D magnetic sensor be production-ready in a child-safe, durable
+Zemi wearable at acceptable unit cost and performance?
 
-**Research question:** Which firmware-level noise-filtering approach minimises
-false-positive pairing events while maintaining ≥95% true pairing detection
-under electromagnetic interference?
-
-**Technical unknowns being resolved:**
-1. Whether a moving average filter provides sufficient noise rejection without introducing unacceptable latency
-2. Whether a Kalman filter tuned to Gen Alpha motor patterns outperforms generic filtering approaches
-3. Whether a hybrid spike-gate approach is necessary for multi-device EMI environments
-
----
-
-### Run Log
-
-| Run ID | Date | Filter | PSM Variant | Duration | Samples | Success Rate | FP Rate | Avg Latency | Notes |
-|--------|------|--------|------------|----------|---------|-------------|---------|-------------|-------|
-| 1 | | NONE (A) | V1 | | | | | | Baseline — FY25 equivalent |
-| 2 | | NONE (A) | V2 | | | | | | |
-| 3 | | NONE (A) | V3 | | | | | | |
-| 4 | | MOVING_AVG (B) | V1 | | | | | | |
-| 5 | | MOVING_AVG (B) | V2 | | | | | | |
-| 6 | | MOVING_AVG (B) | V3 | | | | | | |
-| 7 | | KALMAN (C) | V1 | | | | | | Gen Alpha Q/R tuned |
-| 8 | | KALMAN (C) | V2 | | | | | | |
-| 9 | | KALMAN (C) | V3 | | | | | | |
-| 10 | | HYBRID (D) | V1 | | | | | | Spike gate active |
-| 11 | | HYBRID (D) | V2 | | | | | | |
-| 12 | | HYBRID (D) | V3 | | | | | | |
+## FY25 Baseline
+Stable pairing confirmed up to 0.5m in controlled conditions (94% success rate).
+At 1m, success rate fell to 90% only in static, single-device conditions.
+Multi-device interference, environmental EMI, and miniaturisation remain unresolved.
+Knowledge gap: unresolved (carried forward explicitly from FY25 submission).
 
 ---
 
-### Observations
+## Experiment 1.1 — Noise Filter Iterations
 
-*To be completed as experiments are run. Record: what changed, what was observed, any anomalies.*
+### Hypothesis
+Custom firmware noise-filtering algorithm (iterated from FY25 baseline) will reduce
+false-positive pairing events to <2% in a 10-device concurrent test environment.
 
-**Run 1–3 (Baseline):**  
->
+### Variables
+| Variable | Type | Values Under Test |
+|---|---|---|
+| Filter algorithm | Primary (categorical) | A (baseline), B (moving avg), C (Kalman), D (hybrid) |
+| Window size | Secondary — Iteration B | 4, 8 (default), 16 samples |
+| Q process noise | Secondary — Iterations C, D | 0.01, 0.05 (Gen Alpha), 0.10 |
+| R measurement noise | Secondary — Iterations C, D | 0.1, 0.5 (Gen Alpha), 1.0 |
+| Spike gate threshold | Secondary — Iteration D | 20µT, 50µT (default), 100µT |
 
-**Run 4–6 (Moving Average):**  
->
+### Measurement Protocol
+- 10-device concurrent test in classroom environment (20 Zemi prototype units,
+  10 active transmitters, 10 passive receivers)
+- Each condition runs for 30-minute test session
+- Pairing events logged to UART and Git commit tagged per iteration
+- False positive = pairing event triggered with no intentional pairing gesture
+- Success rate = confirmed pairings / intended pairing attempts × 100%
 
-**Run 7–9 (Kalman):**  
->
+### Results (to be populated during Phase 2 lab testing — Wks 7–12)
 
-**Run 10–12 (Hybrid):**  
->
+| Iteration | Filter Type | Success Rate (%) | False Positive Rate (%) | Pass (≥95% / <2%) |
+|---|---|---|---|---|
+| A — Baseline | None | TBD | TBD | TBD |
+| B — Moving Avg (n=8) | 8-sample window | TBD | TBD | TBD |
+| C — Kalman (Q=0.05, R=0.5) | 1D Kalman per axis | TBD | TBD | TBD |
+| D — Hybrid (gate=50µT + Kalman) | Spike gate + Kalman | TBD | TBD | TBD |
 
----
+### Firmware References
+- src/noise_filter.c — Iterations A, B, C, D
+- src/mlx90393.c    — Sensor I2C driver
+- tests/test_sensor_firmware.c — 4×3 test matrix harness
 
-### Analysis
-
-*Which filter iteration performed best against the success criteria?*
-*Were there any unexpected technical findings?*
-
->
-
----
-
-### Conclusion
-
-*State which filter and PSM variant is selected for Phase 2 scale testing, and why.*
-
->
-
----
-
-## Experiment 1.2 — Pairing State Machine Architecture
-
-**Research question:** What is the optimal firmware state machine architecture
-for reliable, low-latency device pairing using the 3D magnetic sensor?
-
-**Technical unknowns being resolved:**
-1. Whether a dwell confirmation window reduces false pairings enough to justify the added latency
-2. Whether Z-axis directional locking provides meaningful false-positive reduction in practice
-3. Optimal timeout and reconnect window values for Gen Alpha use patterns
+### Git Tags
+- `ca1-exp1.1-iteration-a` — Baseline firmware (FY25 carry-forward)
+- `ca1-exp1.1-iteration-b` — Moving average filter
+- `ca1-exp1.1-iteration-c` — Kalman filter (Gen Alpha Q/R)
+- `ca1-exp1.1-iteration-d` — Hybrid spike-gate + Kalman
 
 ---
 
-### Firmware Change Log
+## Experiment 1.2 — Pairing State Machine Variants
 
-*Record each firmware iteration as it is developed — required for ATO substantiation.*
+### Hypothesis
+Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
+≥95% pairing success at 0–1m in real-world multi-device environments.
 
-| Date | Commit | Change Description | Rationale |
-|------|--------|--------------------|-----------|
-| | | | |
+### Variables
+| Variable | Type | Values Under Test |
+|---|---|---|
+| State machine variant | Primary (categorical) | V1 (threshold), V2 (dwell), V3 (Z-lock) |
+| Pairing threshold | Secondary | 3µT, 5µT (default), 8µT |
+| Dwell time | Secondary — V2, V3 | 100ms, 150ms (default), 250ms |
+| Z-dominance fraction | Secondary — V3 | 60%, 70% (default), 80% |
+
+### Scale Test Conditions
+- Phase 3 (Wks 13–18): 10-device concurrent pairing in classroom + playground
+- Static conditions: devices held still at 0.25m, 0.5m, 0.75m, 1.0m
+- Dynamic conditions: devices worn on wrist during walking and play
+- 8-hour wear stability test: 2 devices worn continuously (school-day simulation)
+
+### Results (to be populated during Phase 3 scale testing — Wks 13–18)
+
+| Variant | Architecture | Success Rate @ 1m (%) | False Positives (%) | 8hr Stable | Pass |
+|---|---|---|---|---|---|
+| V1 — Simple | Threshold only | TBD | TBD | TBD | TBD |
+| V2 — Dwell | Threshold + 150ms hold | TBD | TBD | TBD | TBD |
+| V3 — Z-Lock | Z-dominant + dwell | TBD | TBD | TBD | TBD |
+
+### Firmware References
+- src/pairing_state_machine.c — Variants V1, V2, V3
+- tests/test_sensor_firmware.c — 4×3 filter × PSM matrix runner
+
+### Git Tags
+- `ca1-exp1.2-v1-simple`  — Simple threshold PSM
+- `ca1-exp1.2-v2-dwell`   — Dwell PSM (150ms)
+- `ca1-exp1.2-v3-zlock`   — Z-axis dominance lock PSM
 
 ---
 
-### Phase 2 Test Plan Reference
+## Success Criteria Summary
 
-Following completion of Experiment 1.1 and 1.2, the best-performing
-filter + PSM variant combination progresses to Phase 2:
-**Controlled Lab Testing (Weeks 7–12)**.
-
-Refer to: `Zemi_RD_2026_Scope_Hypothesis_TestPlans.docx`, Section 3.3.
+| Criterion | Target | Status |
+|---|---|---|
+| Pairing success rate at 1m | ≥95% | Pending Phase 3 |
+| False-positive rate | <2% | Pending Phase 2 |
+| Firmware stable over 8hr | Zero crashes / resets | Pending Phase 3 |
+| BOM per-unit cost | Within target range | Pending Phase 4 |
 
 ---
 
-*All experiment records maintained in accordance with ATO R&D Tax Incentive substantiation requirements.*  
-*Zemi Pty Ltd — Confidential — April 2026*
+## ATO Compliance Notes
+- All firmware committed to tkhdwyer82/Zemi-rnd with dated commit history
+- Each iteration tagged in Git prior to test session commencement
+- Experiment sessions logged with date, personnel (Timothy Dwyer), and hours
+- Results entered into this log within 48 hours of each test session
+- Timesheets cross-reference this log by experiment code (CA1-1.1, CA1-1.2)
