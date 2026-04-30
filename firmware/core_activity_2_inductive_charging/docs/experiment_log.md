@@ -181,3 +181,26 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Ambient room temp: 21.8°C
 
 ### Status: ✅ Integrated environment setup complete — calibration Day 2–3
+
+---
+
+## Phase 3A — Day 1 — 01 May 2026 (8 hours)
+**Tag:** ca2-p3a-env-setup | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- S3+M2+X3 integrated configuration assembled:
+  - S3 (Predictive Ramp) loaded to TX unit
+  - M2 (Flexible ferrite composite) at 40mm radius curvature
+  - X3 (Charge-gated BLE, zero-crossing window <3us per 8us coil period) active
+- IR thermometer array calibrated — 5 wrist contact points:
+  - Point 1: +0.1C delta (within ±0.2C spec)
+  - Point 2: -0.1C delta (within ±0.2C spec)
+  - Point 3: +0.2C delta (within ±0.2C spec)
+  - Point 4: +0.0C delta (within ±0.2C spec)
+  - Point 5: -0.1C delta (within ±0.2C spec)
+- Power analyser: 1Hz logging confirmed, baseline 0.000W input
+- Network analyser: S21 channel calibrated
+- BLE smartphone GATT notification counter active and logging
+- Ambient room temp: 21.8C at session start
+
+### Status: Integrated environment setup complete — calibration Day 2-3

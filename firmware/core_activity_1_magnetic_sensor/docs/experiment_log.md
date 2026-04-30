@@ -132,3 +132,21 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - All 30 boards operational — zero dead-on-arrival units
 
 ### Status: ✅ Hardware setup complete — static testing commences Day 4
+
+---
+
+## Phase 3 — Day 1 — 01 May 2026 (4 hours)
+**Tag:** ca1-p3-hw-setup-01 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- 30 x ESP32-S3 boards flashed with D+V3.1 firmware
+  (Hybrid spike-gate >50uT + Kalman Q=0.04 + Z-axis lock 68% + 150ms dwell)
+- Boards numbered CA1-001 through CA1-030, bench layout configured
+- UART logging confirmed on all 30 devices (115200 baud, timestamped)
+- Ambient magnetic field baseline:
+  - X = 1.91uT RMS
+  - Y = 2.03uT RMS
+  - Z = 2.41uT RMS
+- All 30 boards operational — zero dead-on-arrival units
+
+### Status: Hardware setup complete — static testing commences Day 4
