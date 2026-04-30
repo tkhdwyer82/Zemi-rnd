@@ -163,3 +163,21 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Timesheets cross-reference this log by experiment code (CA2-2.1, CA2-2.2, CA2-2.3)
 - FY25 partial completion documented in Innercode R&D FY25 submission (Core Activity 2)
   providing the prior-year baseline from which FY26 hypotheses are drawn
+
+---
+
+## Phase 3A — Day 1 — 01 May 2026 (8 hours)
+**Tag:** ca2-p3a-env-setup | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- S3+M2+X3 integrated configuration assembled:
+  - S3 (Predictive Ramp) loaded to TX unit
+  - M2 (Flexible ferrite composite) at 40mm radius
+  - X3 (Charge-gated BLE, zero-crossing window) active
+- IR thermometer array calibrated: 5 wrist contact points ±0.2°C confirmed
+- Power analyser: 1Hz logging verified, input/output channels confirmed
+- Network analyser: S21 channel calibrated
+- BLE smartphone GATT notification counter active
+- Ambient room temp: 21.8°C
+
+### Status: ✅ Integrated environment setup complete — calibration Day 2–3
