@@ -1,0 +1,24 @@
+# CA2 Phase 3A — IR Array Calibration Log
+# Date: 2026-05-02 | Tag: ca2-p3a-ir-calib | Personnel: Timothy Dwyer
+# Ambient temps tested: 19.2C, 21.8C, 24.1C
+[2026-05-02 10:00:00] CALIB_START: IR array 5-point calibration at 3 ambient temps
+[2026-05-02 10:15:00] AMBIENT_1: 19.2C
+[2026-05-02 10:15:01] IR_CAL: Point 1 delta +0.12C — within ±0.15C spec
+[2026-05-02 10:15:02] IR_CAL: Point 2 delta -0.10C — within ±0.15C spec
+[2026-05-02 10:15:03] IR_CAL: Point 3 delta +0.14C — within ±0.15C spec
+[2026-05-02 10:15:04] IR_CAL: Point 4 delta +0.08C — within ±0.15C spec
+[2026-05-02 10:15:05] IR_CAL: Point 5 delta -0.11C — within ±0.15C spec
+[2026-05-02 10:30:00] AMBIENT_2: 21.8C
+[2026-05-02 10:30:01] IR_CAL: Point 1 delta +0.11C — within ±0.15C spec
+[2026-05-02 10:30:02] IR_CAL: Point 2 delta -0.09C — within ±0.15C spec
+[2026-05-02 10:30:03] IR_CAL: Point 3 delta +0.13C — within ±0.15C spec
+[2026-05-02 10:30:04] IR_CAL: Point 4 delta +0.07C — within ±0.15C spec
+[2026-05-02 10:30:05] IR_CAL: Point 5 delta -0.10C — within ±0.15C spec
+[2026-05-02 10:45:00] AMBIENT_3: 24.1C
+[2026-05-02 10:45:01] IR_CAL: Point 1 delta +0.13C — within ±0.15C spec
+[2026-05-02 10:45:02] IR_CAL: Point 2 delta -0.11C — within ±0.15C spec
+[2026-05-02 10:45:03] IR_CAL: Point 3 delta +0.15C — within ±0.15C spec
+[2026-05-02 10:45:04] IR_CAL: Point 4 delta +0.09C — within ±0.15C spec
+[2026-05-02 10:45:05] IR_CAL: Point 5 delta -0.12C — within ±0.15C spec
+[2026-05-02 11:00:00] RESULT: All 5 points PASS at all 3 ambient temps — array fully calibrated
+[2026-05-02 17:00:00] STATUS: IR calibration complete — power analyser calibration scheduled Day 3

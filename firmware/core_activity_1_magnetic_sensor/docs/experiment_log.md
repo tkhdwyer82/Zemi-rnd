@@ -150,3 +150,17 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - All 30 boards operational — zero dead-on-arrival units
 
 ### Status: Hardware setup complete — static testing commences Day 4
+
+---
+
+## Phase 3 — Day 2 — 02 May 2026 (4 hours)
+**Tag:** ca1-p3-hw-setup-02 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Board numbering CA1-001 through CA1-030 verified against bench layout
+- UART timestamp resolution confirmed: 1ms precision on all 30 devices
+- Zero clock drift detected across board set
+- Ambient magnetic field re-confirmed: X=1.91uT, Y=2.03uT, Z=2.41uT RMS stable
+- Bench layout finalised and documented for Phase 3 static test sessions
+
+### Status: Board setup complete — static classroom testing commences Day 4

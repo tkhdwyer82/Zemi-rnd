@@ -204,3 +204,20 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Ambient room temp: 21.8C at session start
 
 ### Status: Integrated environment setup complete — calibration Day 2-3
+
+---
+
+## Phase 3A — Day 2 — 02 May 2026 (8 hours)
+**Tag:** ca2-p3a-ir-calib | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Full IR thermometer array re-verification after Day 1 setup
+- 5-point calibration cross-checked against reference thermometer at three ambient temps:
+  - 19.2°C: all 5 points within ±0.15°C — PASS
+  - 21.8°C: all 5 points within ±0.15°C — PASS
+  - 24.1°C: all 5 points within ±0.15°C — PASS
+- Calibration tighter than Day 1 (±0.15°C vs ±0.20°C) — array fully settled
+- Calibration data logged and committed
+- Power analyser calibration scheduled for Day 3
+
+### Status: IR array calibration complete — power analyser calibration Day 3
