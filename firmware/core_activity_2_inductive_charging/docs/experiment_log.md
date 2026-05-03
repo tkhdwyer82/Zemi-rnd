@@ -221,3 +221,20 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Power analyser calibration scheduled for Day 3
 
 ### Status: IR array calibration complete — power analyser calibration Day 3
+
+---
+
+## Phase 3A — Day 3 — 03 May 2026 (8 hours)
+**Tag:** ca2-p3a-power-calib | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Power analyser calibration — full BQ500212A TX operating range tested:
+  - 0W baseline: within ±0.5% of reference meter — PASS
+  - 2.5W mid-load: within ±0.5% of reference meter — PASS
+  - 5.0W full-load: within ±0.5% of reference meter — PASS
+- 1Hz logging rate confirmed at all three load points
+- Input/output channel separation verified — no cross-channel bleed
+- Reference meter: Fluke 87V, calibrated
+- Power analyser confirmed ready for Phase 3 integrated sessions
+
+### Status: Power analyser calibration complete — integrated sessions ready

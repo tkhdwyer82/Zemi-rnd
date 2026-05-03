@@ -1,0 +1,10 @@
+# CA1 Phase 3 — Consent & Protocol Log
+# Date: 2026-05-03 | Tag: ca1-p3-consent-protocol | Personnel: Timothy Dwyer
+[2026-05-03 09:00:00] WORK_START: Participant consent documentation commenced
+[2026-05-03 10:30:00] CONSENT: Proximity clause drafted — 0-100cm intentional contact
+[2026-05-03 11:00:00] CONSENT: Age range confirmed 8-15 years, parental consent required
+[2026-05-03 12:00:00] PROTOCOL: Static test distances set — 0.5m and 1.0m
+[2026-05-03 13:00:00] PROTOCOL: Dynamic test sessions A-D defined
+[2026-05-03 14:00:00] PROTOCOL: 8-hour stability test protocol documented
+[2026-05-03 14:30:00] DOCS: phase3_test_protocol.md committed to repository
+[2026-05-03 17:00:00] STATUS: Consent docs and protocol complete — static testing Day 4

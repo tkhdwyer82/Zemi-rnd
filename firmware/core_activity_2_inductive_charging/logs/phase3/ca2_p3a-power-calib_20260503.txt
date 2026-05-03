@@ -1,0 +1,17 @@
+# CA2 Phase 3A — Power Analyser Calibration Log
+# Date: 2026-05-03 | Tag: ca2-p3a-power-calib | Personnel: Timothy Dwyer
+# Reference meter: Fluke 87V (calibrated)
+[2026-05-03 09:30:00] CALIB_START: Power analyser calibration commenced
+[2026-05-03 09:45:00] LOAD_0W: Baseline test — 0W
+[2026-05-03 09:45:01] POWER: Input 0.000W — reference 0.000W — delta 0.000W — PASS
+[2026-05-03 09:45:02] POWER: Output 0.000W — reference 0.000W — delta 0.000W — PASS
+[2026-05-03 10:15:00] LOAD_2.5W: Mid-load test — 2.5W
+[2026-05-03 10:15:01] POWER: Input 2.498W — reference 2.500W — delta -0.002W (0.08%) — PASS
+[2026-05-03 10:15:02] POWER: Output 2.497W — reference 2.500W — delta -0.003W (0.12%) — PASS
+[2026-05-03 10:45:00] LOAD_5W: Full-load test — 5W
+[2026-05-03 10:45:01] POWER: Input 4.997W — reference 5.000W — delta -0.003W (0.06%) — PASS
+[2026-05-03 10:45:02] POWER: Output 4.996W — reference 5.000W — delta -0.004W (0.08%) — PASS
+[2026-05-03 11:00:00] LOG_RATE: 1Hz logging confirmed at all three load points
+[2026-05-03 11:15:00] CHANNEL: Input/output channel separation verified — no cross-channel bleed
+[2026-05-03 11:30:00] RESULT: All load points PASS — power analyser ready for integrated sessions
+[2026-05-03 17:00:00] STATUS: Power analyser calibration complete

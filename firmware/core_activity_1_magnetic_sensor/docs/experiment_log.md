@@ -164,3 +164,20 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Bench layout finalised and documented for Phase 3 static test sessions
 
 ### Status: Board setup complete — static classroom testing commences Day 4
+
+---
+
+## Phase 3 — Day 3 — 03 May 2026 (4 hours)
+**Tag:** ca1-p3-consent-protocol | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Participant consent documentation prepared for Gen Alpha children aged 8-15
+- Proximity clause added covering 0-100cm intentional contact during pairing gestures
+- Phase 3 test protocol finalised:
+  - Static tests: 0.5m and 1.0m, classroom environment
+  - Dynamic tests: walking and active play, playground environment
+  - 8-hour stability test: school-day simulation
+  - Parental consent required for all participants
+- Protocol committed to docs/phase3_test_protocol.md
+
+### Status: Consent docs and protocol complete — static testing commences Day 4
