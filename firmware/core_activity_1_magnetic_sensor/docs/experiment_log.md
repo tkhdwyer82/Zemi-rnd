@@ -181,3 +181,22 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Protocol committed to docs/phase3_test_protocol.md
 
 ### Status: Consent docs and protocol complete — static testing commences Day 4
+
+---
+
+## Phase 3 — Day 4 — 04 May 2026 (4 hours)
+**Tag:** ca1-p3-static-classroom-01 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Static pairing test batch 1 — 0.5m, classroom environment
+- 10 participants (Gen Alpha, ages 8-15), parental consent collected
+- 200 total attempts (10 pairs x 20 attempts per pair)
+- D+V3.1 firmware active on all 30 boards
+- Ambient baseline confirmed stable: X=1.91uT, Y=2.03uT, Z=2.41uT RMS
+
+### Results:
+- Pairing success rate: 97.0% (194/200) at 0.5m — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI injection events) — PASS (<2%)
+- Mean time-to-pair: 191ms at 0.5m
+
+### Status: Batch 1 complete — Batch 2 (0.5m repeat) Day 5

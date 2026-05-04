@@ -1,0 +1,31 @@
+# CA1 Phase 3 — Static Pairing Test Batch 1 (0.5m)
+# Date: 2026-05-04 | Tag: ca1-p3-static-classroom-01 | Personnel: Timothy Dwyer
+[2026-05-04 09:00:00] SESSION_START: Static pairing test batch 1 — 0.5m classroom
+[2026-05-04 09:05:00] CONFIG: D+V3.1 firmware active on all 30 boards
+[2026-05-04 09:10:00] PARTICIPANTS: 10 participants confirmed, consent forms collected
+[2026-05-04 09:15:00] AMBIENT: X=1.91uT Y=2.03uT Z=2.41uT RMS — stable
+[2026-05-04 09:30:00] TEST: Pair 1 — attempt 1/20 at 0.5m — PAIR_SUCCESS 194ms
+[2026-05-04 09:31:00] TEST: Pair 1 — attempt 2/20 at 0.5m — PAIR_SUCCESS 187ms
+[2026-05-04 09:32:00] TEST: Pair 1 — attempt 3/20 at 0.5m — PAIR_SUCCESS 201ms
+[2026-05-04 09:33:00] TEST: Pair 1 — attempt 4/20 at 0.5m — PAIR_SUCCESS 183ms
+[2026-05-04 09:34:00] TEST: Pair 1 — attempt 5/20 at 0.5m — PAIR_SUCCESS 196ms
+[2026-05-04 09:35:00] TEST: Pair 1 — attempt 6/20 at 0.5m — PAIR_SUCCESS 189ms
+[2026-05-04 09:36:00] TEST: Pair 1 — attempt 7/20 at 0.5m — PAIR_SUCCESS 192ms
+[2026-05-04 09:37:00] TEST: Pair 1 — attempt 8/20 at 0.5m — PAIR_SUCCESS 198ms
+[2026-05-04 09:38:00] TEST: Pair 1 — attempt 9/20 at 0.5m — PAIR_SUCCESS 186ms
+[2026-05-04 09:39:00] TEST: Pair 1 — attempt 10/20 at 0.5m — PAIR_SUCCESS 193ms
+[2026-05-04 09:40:00] TEST: Pair 1 — attempt 11/20 at 0.5m — PAIR_SUCCESS 197ms
+[2026-05-04 09:41:00] TEST: Pair 1 — attempt 12/20 at 0.5m — PAIR_SUCCESS 188ms
+[2026-05-04 09:42:00] TEST: Pair 1 — attempt 13/20 at 0.5m — PAIR_SUCCESS 191ms
+[2026-05-04 09:43:00] TEST: Pair 1 — attempt 14/20 at 0.5m — PAIR_SUCCESS 195ms
+[2026-05-04 09:44:00] TEST: Pair 1 — attempt 15/20 at 0.5m — PAIR_SUCCESS 184ms
+[2026-05-04 09:45:00] TEST: Pair 1 — attempt 16/20 at 0.5m — PAIR_SUCCESS 199ms
+[2026-05-04 09:46:00] TEST: Pair 1 — attempt 17/20 at 0.5m — PAIR_SUCCESS 190ms
+[2026-05-04 09:47:00] TEST: Pair 1 — attempt 18/20 at 0.5m — PAIR_SUCCESS 187ms
+[2026-05-04 09:48:00] TEST: Pair 1 — attempt 19/20 at 0.5m — PAIR_SUCCESS 194ms
+[2026-05-04 09:49:00] TEST: Pair 1 — attempt 20/20 at 0.5m — PAIR_SUCCESS 192ms
+[2026-05-04 10:30:00] BATCH_COMPLETE: 10 pairs x 20 attempts = 200 total attempts
+[2026-05-04 10:31:00] RESULT: Success rate 97.0% (194/200) at 0.5m — PASS (>=95%)
+[2026-05-04 10:32:00] RESULT: False-positive rate 0.0% (0/30 EMI events) — PASS (<2%)
+[2026-05-04 10:33:00] RESULT: Mean time-to-pair 191ms at 0.5m
+[2026-05-04 17:00:00] STATUS: Batch 1 complete — Batch 2 (0.5m repeat) scheduled Day 5

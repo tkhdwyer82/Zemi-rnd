@@ -1,0 +1,12 @@
+# CA2 Phase 3B — Integrated Session 1 Setup
+# Date: 2026-05-04 | Tag: ca2-p3b-session1-setup | Personnel: Timothy Dwyer
+[2026-05-04 11:00:00] SETUP_START: Integrated session 1 — S3+M2+X3 configuration
+[2026-05-04 11:15:00] CONFIG: S3 predictive ramp firmware confirmed on TX unit
+[2026-05-04 11:30:00] CONFIG: M2 flexible ferrite at 40mm radius — coil coupling verified
+[2026-05-04 11:45:00] CONFIG: X3 zero-crossing gate active — BLE window <3us confirmed
+[2026-05-04 12:00:00] INSTRUMENTS: IR array armed — 5 contact points ready
+[2026-05-04 12:15:00] INSTRUMENTS: Power analyser 1Hz logging armed
+[2026-05-04 12:30:00] INSTRUMENTS: Network analyser S21 channel ready
+[2026-05-04 12:45:00] AMBIENT: Room temp 21.2C recorded
+[2026-05-04 13:00:00] BLE: Smartphone GATT counter active — PDR logging ready
+[2026-05-04 17:00:00] STATUS: Session 1 setup complete — integrated run commences Day 5

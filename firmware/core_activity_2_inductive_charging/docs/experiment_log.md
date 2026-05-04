@@ -238,3 +238,22 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Power analyser confirmed ready for Phase 3 integrated sessions
 
 ### Status: Power analyser calibration complete — integrated sessions ready
+
+---
+
+## Phase 3B — Day 4 — 04 May 2026 (8 hours)
+**Tag:** ca2-p3b-session1-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 1 setup — S3+M2+X3 concurrent configuration
+- S3 predictive ramp firmware confirmed on TX unit
+- M2 flexible ferrite at 40mm radius — coil coupling verified
+- X3 zero-crossing gate active — BLE window <3us confirmed
+- All instrumentation armed:
+  - IR thermometer array: 5 contact points ready
+  - Power analyser: 1Hz logging armed
+  - Network analyser: S21 channel ready
+  - BLE smartphone: GATT PDR counter active
+- Ambient room temp: 21.2C
+
+### Status: Session 1 setup complete — integrated run commences Day 5
