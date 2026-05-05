@@ -1,0 +1,21 @@
+# CA1 Phase 3 — Static Pairing Test Batch 2 (0.5m repeat)
+# Date: 2026-05-05 | Tag: ca1-p3-static-classroom-02 | Personnel: Timothy Dwyer
+[2026-05-05 09:00:00] SESSION_START: Static pairing test batch 2 — 0.5m repeat
+[2026-05-05 09:10:00] PARTICIPANTS: 10 participants same cohort as Day 4
+[2026-05-05 09:15:00] AMBIENT: X=1.90uT Y=2.04uT Z=2.42uT RMS — stable
+[2026-05-05 09:30:00] TEST: Pair 1 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 09:52:00] TEST: Pair 2 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 10:14:00] TEST: Pair 3 — 20 attempts at 0.5m — 19/20 PASS
+[2026-05-05 10:36:00] TEST: Pair 4 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 10:58:00] TEST: Pair 5 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 11:20:00] TEST: Pair 6 — 20 attempts at 0.5m — 19/20 PASS
+[2026-05-05 11:42:00] TEST: Pair 7 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 12:04:00] TEST: Pair 8 — 20 attempts at 0.5m — 19/20 PASS
+[2026-05-05 12:26:00] TEST: Pair 9 — 20 attempts at 0.5m — 20/20 PASS
+[2026-05-05 12:48:00] TEST: Pair 10 — 20 attempts at 0.5m — 18/20 PASS
+[2026-05-05 13:00:00] BATCH_COMPLETE: 200 total attempts
+[2026-05-05 13:01:00] RESULT: Success rate 97.5% (195/200) — PASS (>=95%)
+[2026-05-05 13:02:00] RESULT: False-positive rate 0.0% (0/30 EMI events) — PASS (<2%)
+[2026-05-05 13:03:00] RESULT: Mean time-to-pair 188ms
+[2026-05-05 13:05:00] ANALYSIS: Day4 97.0% vs Day5 97.5% — consistent across sessions
+[2026-05-05 17:00:00] STATUS: 0.5m confirmed — 1.0m batch commences Day 6

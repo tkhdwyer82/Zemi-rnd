@@ -1,0 +1,20 @@
+# CA2 Phase 3B — Integrated Session 1 Run (S3+M2+X3)
+# Date: 2026-05-05 | Tag: ca2-p3b-session1-run | Personnel: Timothy Dwyer
+[2026-05-05 13:30:00] SESSION1_START: Integrated session 1 — S3+M2+X3 concurrent 2hr run
+[2026-05-05 13:30:01] AMBIENT: Room temp 21.2C at session start
+[2026-05-05 13:35:00] THERMAL: Surface temp 22.1C — baseline pre-charging
+[2026-05-05 13:40:00] CHARGING: TX power ramp initiated — S3 predictive ramp active
+[2026-05-05 14:00:00] THERMAL: Surface temp 30min mark 31.4C — S3 pre-empting
+[2026-05-05 14:30:00] THERMAL: Surface temp 60min mark 34.8C — S3 holding
+[2026-05-05 14:30:01] EFFICIENCY: 60min efficiency 72.1%
+[2026-05-05 14:30:02] BLE: X3 gate active — PDR 98.0% latency 8ms
+[2026-05-05 15:00:00] THERMAL: Surface temp 90min mark 35.9C — within threshold
+[2026-05-05 15:30:00] THERMAL: Surface temp 120min mark 36.6C — PEAK
+[2026-05-05 15:30:01] EFFICIENCY: 120min efficiency 72.3%
+[2026-05-05 15:30:02] BLE: X3 gate active — PDR 98.2% latency 8ms avg
+[2026-05-05 15:30:03] RESULT: Peak surface temp 36.6C — PASS (<=38C)
+[2026-05-05 15:30:04] RESULT: Mean efficiency 72.3% — PASS (>=70%)
+[2026-05-05 15:30:05] RESULT: X3 efficiency delta -0.4% — PASS (<=+-3%)
+[2026-05-05 15:30:06] RESULT: BLE PDR 98.2% — PASS (>=95%)
+[2026-05-05 15:30:07] RESULT: All 6 success criteria met simultaneously — PASS
+[2026-05-05 17:00:00] STATUS: Session 1 complete — Session 2 S3+M3+X3 Day 6

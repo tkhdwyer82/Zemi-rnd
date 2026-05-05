@@ -257,3 +257,24 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Ambient room temp: 21.2C
 
 ### Status: Session 1 setup complete — integrated run commences Day 5
+
+---
+
+## Phase 3B — Day 5 — 05 May 2026 (8 hours)
+**Tag:** ca2-p3b-session1-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 1 — S3+M2+X3 concurrent 2-hour run
+- Ambient room temp: 21.2C at session start
+- Surface temp logged at 30-minute intervals throughout
+
+### Results:
+- Peak surface temperature: 36.6C — PASS (<=38C)
+- Mean charging efficiency: 72.3% — PASS (>=70%)
+- Efficiency at 1hr: 72.1% / Efficiency at 2hr: 72.3% — flat, no degradation
+- X3 BLE efficiency delta: -0.4% — PASS (<=+-3%)
+- BLE packet delivery ratio: 98.2% — PASS (>=95%)
+- BLE notification latency: 8ms average
+- All 6 success criteria met simultaneously — PASS
+
+### Status: Session 1 complete — Session 2 (S3+M3+X3) commences Day 6

@@ -200,3 +200,25 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Mean time-to-pair: 191ms at 0.5m
 
 ### Status: Batch 1 complete — Batch 2 (0.5m repeat) Day 5
+
+---
+
+## Phase 3 — Day 5 — 05 May 2026 (4 hours)
+**Tag:** ca1-p3-static-classroom-02 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Static pairing test batch 2 — 0.5m repeat confirmation
+- Same 10-participant cohort as Day 4
+- 200 total attempts (10 pairs x 20 attempts)
+- Ambient stable: X=1.90uT, Y=2.04uT, Z=2.42uT RMS
+
+### Results:
+- Pairing success rate: 97.5% (195/200) at 0.5m — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 188ms — consistent with Day 4 (191ms)
+
+### Analysis:
+- Day 4 vs Day 5: 97.0% vs 97.5% — consistent, both above threshold
+- 0.5m static performance confirmed across two independent sessions
+
+### Status: 0.5m static confirmed — 1.0m batch commences Day 6
