@@ -1,0 +1,12 @@
+# CA2 Phase 3B — Integrated Session 2 Setup (S3+M3+X3)
+# Date: 2026-05-06 | Tag: ca2-p3b-session2-setup | Personnel: Timothy Dwyer
+[2026-05-06 11:00:00] SETUP_START: Integrated session 2 — S3+M3+X3 configuration
+[2026-05-06 11:15:00] CONFIG: M3 segmented tiles substituted for M2 flexible ferrite
+[2026-05-06 11:30:00] CONFIG: M3 tile-to-tile gap measured — 0.3mm nominal
+[2026-05-06 11:45:00] CONFIG: S3 predictive ramp firmware confirmed on TX unit
+[2026-05-06 12:00:00] CONFIG: X3 zero-crossing gate confirmed active — BLE window <3us
+[2026-05-06 12:15:00] INSTRUMENTS: IR array re-calibrated for M3 geometry
+[2026-05-06 12:30:00] INSTRUMENTS: Power analyser 1Hz logging armed
+[2026-05-06 12:45:00] INSTRUMENTS: Network analyser S21 channel ready
+[2026-05-06 13:00:00] AMBIENT: Room temp 21.5C at setup completion
+[2026-05-06 17:00:00] STATUS: Session 2 setup complete — S3+M3+X3 run Day 7

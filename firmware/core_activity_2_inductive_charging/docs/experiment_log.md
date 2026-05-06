@@ -278,3 +278,19 @@ charging efficiency (within ±3% of no-BLE baseline).
 - All 6 success criteria met simultaneously — PASS
 
 ### Status: Session 1 complete — Session 2 (S3+M3+X3) commences Day 6
+
+---
+
+## Phase 3B — Day 6 — 06 May 2026 (8 hours)
+**Tag:** ca2-p3b-session2-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 2 setup — S3+M3+X3 configuration
+- M3 segmented tiles substituted for M2 flexible ferrite
+- M3 tile-to-tile gap measured: 0.3mm nominal
+- IR array re-calibrated for M3 geometry
+- S3 predictive ramp and X3 zero-crossing gate confirmed active
+- All instrumentation armed
+- Ambient room temp: 21.5C
+
+### Status: Session 2 setup complete — S3+M3+X3 integrated run Day 7

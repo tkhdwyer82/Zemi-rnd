@@ -222,3 +222,26 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - 0.5m static performance confirmed across two independent sessions
 
 ### Status: 0.5m static confirmed — 1.0m batch commences Day 6
+
+---
+
+## Phase 3 — Day 6 — 06 May 2026 (4 hours)
+**Tag:** ca1-p3-static-classroom-03 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Static pairing test batch 3 — 1.0m, classroom environment
+- 10 participants, parental consent confirmed
+- 200 total attempts (10 pairs x 20 attempts)
+- Ambient stable: X=1.92uT, Y=2.02uT, Z=2.40uT RMS
+
+### Results:
+- Pairing success rate: 95.5% (191/200) at 1.0m — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 203ms — slightly higher than 0.5m (188ms) as expected
+- 9 failures: 8 timeouts, 1 retry success — zero wrong-device pairings
+
+### Analysis:
+- 1.0m success rate 95.5% — above 95% threshold, Hyp A on track at scale
+- Z-axis lock maintaining directional discrimination at extended range
+
+### Status: 1.0m batch complete — analysis and dynamic tests Day 7
