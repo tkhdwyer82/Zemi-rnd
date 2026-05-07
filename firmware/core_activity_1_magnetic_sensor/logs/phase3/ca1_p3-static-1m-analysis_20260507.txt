@@ -1,0 +1,14 @@
+# CA1 Phase 3 — Static Results Analysis (Days 4-6)
+# Date: 2026-05-07 | Tag: ca1-p3-static-1m-analysis | Personnel: Timothy Dwyer
+[2026-05-07 09:00:00] ANALYSIS_START: Aggregated static test results Days 4-6
+[2026-05-07 09:15:00] DATA: Day 4 batch 1 (0.5m) — 97.0% success, 0% FP, 191ms mean
+[2026-05-07 09:16:00] DATA: Day 5 batch 2 (0.5m) — 97.5% success, 0% FP, 188ms mean
+[2026-05-07 09:17:00] DATA: Day 6 batch 3 (1.0m) — 95.5% success, 0% FP, 203ms mean
+[2026-05-07 09:30:00] ANALYSIS: 0.5m combined 97.25% (389/400) — well above 95% threshold
+[2026-05-07 09:31:00] ANALYSIS: 1.0m 95.5% (191/200) — above 95% threshold
+[2026-05-07 09:32:00] ANALYSIS: FP rate 0.0% across all 600 static attempts
+[2026-05-07 09:33:00] ANALYSIS: Mean time-to-pair range 188-203ms across all distances
+[2026-05-07 09:45:00] HYPOTHESIS: Hyp A trajectory CONFIRMED — >=95% at 1.0m in 10-device env
+[2026-05-07 09:46:00] HYPOTHESIS: Hyp B trajectory CONFIRMED — 0% FP across all static sessions
+[2026-05-07 10:00:00] INVOICE: INV-TKD-2026-W01 issued — 84h, $20,160 ex-GST, due 17 May 2026
+[2026-05-07 17:00:00] STATUS: Static analysis complete — dynamic tests commence Week 2
