@@ -269,3 +269,27 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
 
 ### Status: Static analysis complete — dynamic tests commence Week 2
+
+---
+
+## Phase 3 — Day 7 — 07 May 2026 (4 hours)
+**Tag:** ca1-p3-static-1m-analysis | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Aggregated analysis of all static test results (Days 4-6)
+- Cross-session comparison: 0.5m (two batches) and 1.0m (one batch)
+
+### Aggregated Results:
+- 0.5m combined: 97.25% success (389/400) — well above 95% threshold
+- 1.0m: 95.5% success (191/200) — above 95% threshold
+- False-positive rate: 0.0% across all 600 static attempts
+- Mean time-to-pair: 188-203ms across all distances
+
+### Hypothesis Assessment:
+- Hyp A CONFIRMED trajectory: >=95% pairing success at 1.0m in 10-device concurrent environment
+- Hyp B CONFIRMED trajectory: 0% false-positive rate across all static sessions
+
+### Invoice:
+- INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
+
+### Status: Static analysis complete — dynamic tests commence Week 2

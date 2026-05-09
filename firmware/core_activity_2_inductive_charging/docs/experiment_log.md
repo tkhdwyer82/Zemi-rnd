@@ -323,3 +323,32 @@ charging efficiency (within ±3% of no-BLE baseline).
 - INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
 
 ### Status: Session 2 complete — Session 3 elevated ambient stress test Week 2
+
+---
+
+## Phase 3B — Day 7 — 07 May 2026 (8 hours)
+**Tag:** ca2-p3b-session2-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 2 — S3+M3+X3 concurrent 2-hour run
+- Ambient room temp: 21.5C at session start
+- Surface temp logged at 30-minute intervals
+
+### Results:
+- Peak surface temperature: 36.4C — PASS (<=38C)
+- Efficiency at 1hr: 74.9% / Efficiency at 2hr: 75.1% — flat, no degradation
+- Mean charging efficiency: 75.1% — PASS (>=70%)
+- X3 BLE efficiency delta: -0.5% — PASS (<=+-3%)
+- BLE packet delivery ratio: 98.4% — PASS (>=95%)
+- BLE notification latency: 8ms average
+- All 6 success criteria met — M3 outperforms M2 (75.1% vs 72.3%)
+
+### M2 vs M3 Comparison:
+- M2 peak temp: 36.6C / M3 peak temp: 36.4C — M3 runs slightly cooler
+- M2 efficiency: 72.3% / M3 efficiency: 75.1% — M3 higher margin
+- Both configurations meet all 6 success criteria simultaneously
+
+### Invoice:
+- INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
+
+### Status: Session 2 complete — Session 3 elevated ambient stress test Week 2

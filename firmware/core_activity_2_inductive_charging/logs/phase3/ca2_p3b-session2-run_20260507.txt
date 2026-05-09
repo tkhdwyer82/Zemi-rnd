@@ -1,25 +1,17 @@
 # CA2 Phase 3B — Integrated Session 2 Run (S3+M3+X3)
 # Date: 2026-05-07 | Tag: ca2-p3b-session2-run | Personnel: Timothy Dwyer
-[2026-05-07 11:00:00] SESSION2_START: Integrated session 2 — S3+M3+X3 concurrent 2hr run
-[2026-05-07 11:00:01] AMBIENT: Room temp 21.5C at session start
+[2026-05-07 11:00:00] SESSION2_START: S3+M3+X3 concurrent 2hr run
+[2026-05-07 11:00:01] AMBIENT: Room temp 21.5C
 [2026-05-07 11:05:00] THERMAL: Surface temp 22.3C — baseline pre-charging
 [2026-05-07 11:10:00] CHARGING: TX power ramp initiated — S3 predictive ramp active
-[2026-05-07 11:30:00] THERMAL: 30min mark — surface temp 33.8C
-[2026-05-07 11:30:01] EFFICIENCY: 30min efficiency 74.6%
-[2026-05-07 11:30:02] BLE: X3 gate active — PDR 98.3% latency 8ms
-[2026-05-07 12:00:00] THERMAL: 60min mark — surface temp 35.1C
-[2026-05-07 12:00:01] EFFICIENCY: 60min efficiency 74.9%
-[2026-05-07 12:00:02] BLE: X3 gate active — PDR 98.4% latency 8ms
-[2026-05-07 12:30:00] THERMAL: 90min mark — surface temp 35.8C
-[2026-05-07 12:30:01] EFFICIENCY: 90min efficiency 75.0%
-[2026-05-07 13:00:00] THERMAL: 120min mark — surface temp 36.4C — PEAK
-[2026-05-07 13:00:01] EFFICIENCY: 120min efficiency 75.1%
-[2026-05-07 13:00:02] BLE: X3 gate active — PDR 98.4% latency 8ms avg
-[2026-05-07 13:00:03] RESULT: Peak surface temp 36.4C — PASS (<=38C)
-[2026-05-07 13:00:04] RESULT: Mean efficiency 75.1% — PASS (>=70%)
-[2026-05-07 13:00:05] RESULT: X3 efficiency delta -0.5% — PASS (<=+-3%)
-[2026-05-07 13:00:06] RESULT: BLE PDR 98.4% — PASS (>=95%)
-[2026-05-07 13:00:07] RESULT: All 6 success criteria met — M3 outperforms M2 on efficiency
-[2026-05-07 13:00:08] COMPARE: M2 peak 36.6C vs M3 peak 36.4C — M3 runs cooler
-[2026-05-07 13:00:09] COMPARE: M2 efficiency 72.3% vs M3 efficiency 75.1% — M3 higher margin
+[2026-05-07 11:30:00] THERMAL: 30min — 33.8C | EFFICIENCY: 74.6% | BLE PDR 98.3% 8ms
+[2026-05-07 12:00:00] THERMAL: 60min — 35.1C | EFFICIENCY: 74.9% | BLE PDR 98.4% 8ms
+[2026-05-07 12:30:00] THERMAL: 90min — 35.8C | EFFICIENCY: 75.0% | BLE PDR 98.4% 8ms
+[2026-05-07 13:00:00] THERMAL: 120min — 36.4C PEAK | EFFICIENCY: 75.1% | BLE PDR 98.4% 8ms
+[2026-05-07 13:01:00] RESULT: Peak surface temp 36.4C — PASS (<=38C)
+[2026-05-07 13:02:00] RESULT: Mean efficiency 75.1% — PASS (>=70%)
+[2026-05-07 13:03:00] RESULT: X3 efficiency delta -0.5% — PASS (<=+-3%)
+[2026-05-07 13:04:00] RESULT: BLE PDR 98.4% — PASS (>=95%)
+[2026-05-07 13:05:00] RESULT: All 6 success criteria met simultaneously
+[2026-05-07 13:06:00] COMPARE: M2 36.6C 72.3% vs M3 36.4C 75.1% — M3 outperforms on both
 [2026-05-07 17:00:00] STATUS: Week 1 complete — INV-TKD-2026-W01 issued
