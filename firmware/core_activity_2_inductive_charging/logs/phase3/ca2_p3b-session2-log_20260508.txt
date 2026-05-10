@@ -1,0 +1,10 @@
+# CA2 Phase 3B — Session 2 Data Analysis Log
+# Date: 2026-05-08 | Tag: ca2-p3b-session2-log | Personnel: Timothy Dwyer
+[2026-05-08 09:00:00] ANALYSIS_START: Session 2 data review — S3+M3+X3
+[2026-05-08 09:30:00] THERMAL: dT/dt analysis — S3 30s window responding correctly to M3 profile
+[2026-05-08 10:00:00] POWER: CSV export reviewed — efficiency curve flat 74.6-75.1% over 2hrs
+[2026-05-08 10:30:00] BLE: X3 gate timing — no scheduling conflicts with S3 power modulation
+[2026-05-08 11:00:00] NETWORK: M3 S21 attenuation 17.6dB vs M2 16.9dB — M3 better shielding
+[2026-05-08 11:30:00] MLX: Noise floor during session +2.0uT RMS — within <5uT CA1 threshold
+[2026-05-08 12:00:00] CROSS_REF: CA1 experiment log updated with MLX noise measurement
+[2026-05-08 17:00:00] STATUS: Session 2 analysis complete — Session 3 elevated ambient scheduled

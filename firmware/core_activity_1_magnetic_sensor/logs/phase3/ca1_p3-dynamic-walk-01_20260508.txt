@@ -1,0 +1,22 @@
+# CA1 Phase 3 — Dynamic Test Session 1 (Walking)
+# Date: 2026-05-08 | Tag: ca1-p3-dynamic-walk-01 | Personnel: Timothy Dwyer
+[2026-05-08 09:00:00] SESSION_START: Dynamic test session 1 — children walking
+[2026-05-08 09:10:00] PARTICIPANTS: 10 pairs, ages 8-15, parental consent confirmed
+[2026-05-08 09:15:00] AMBIENT: X=1.91uT Y=2.03uT Z=2.41uT RMS — stable
+[2026-05-08 09:20:00] CONFIG: D+V3.1 — spike-gate >50uT, Kalman Q=0.04, Z-lock 68%
+[2026-05-08 09:30:00] TEST: Pair 1 — walking pace, 20 attempts — 20/20 PASS 211ms mean
+[2026-05-08 09:52:00] TEST: Pair 2 — walking pace, 20 attempts — 19/20 PASS 224ms mean
+[2026-05-08 10:14:00] TEST: Pair 3 — walking pace, 20 attempts — 20/20 PASS 209ms mean
+[2026-05-08 10:36:00] TEST: Pair 4 — walking pace, 20 attempts — 20/20 PASS 215ms mean
+[2026-05-08 10:58:00] TEST: Pair 5 — walking pace, 20 attempts — 19/20 PASS 221ms mean
+[2026-05-08 11:20:00] TEST: Pair 6 — walking pace, 20 attempts — 20/20 PASS 213ms mean
+[2026-05-08 11:42:00] TEST: Pair 7 — walking pace, 20 attempts — 19/20 PASS 228ms mean
+[2026-05-08 12:04:00] TEST: Pair 8 — walking pace, 20 attempts — 20/20 PASS 214ms mean
+[2026-05-08 12:26:00] TEST: Pair 9 — walking pace, 20 attempts — 18/20 PASS 231ms mean
+[2026-05-08 12:48:00] TEST: Pair 10 — walking pace, 20 attempts — 17/20 PASS 219ms mean
+[2026-05-08 13:00:00] BATCH_COMPLETE: 200 total attempts
+[2026-05-08 13:01:00] RESULT: Success rate 96.0% (192/200) — PASS (>=95%)
+[2026-05-08 13:02:00] RESULT: False-positive rate 0.0% (0/30 EMI events) — PASS (<2%)
+[2026-05-08 13:03:00] RESULT: Mean time-to-pair 218ms
+[2026-05-08 13:04:00] FAILURES: 8 timeouts during device orientation change mid-walk
+[2026-05-08 17:00:00] STATUS: Walking tests complete — backpack EMI test Day 9

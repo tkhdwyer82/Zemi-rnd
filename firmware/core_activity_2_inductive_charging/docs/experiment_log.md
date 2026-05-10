@@ -352,3 +352,22 @@ charging efficiency (within ±3% of no-BLE baseline).
 - INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
 
 ### Status: Session 2 complete — Session 3 elevated ambient stress test Week 2
+
+---
+
+## Phase 3B — Day 8 — 08 May 2026 (8 hours)
+**Tag:** ca2-p3b-session2-log | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 2 data logging review and analysis
+- Cross-system interaction characterisation — S3 thermal vs X3 BLE gate timing
+- Power analyser CSV export and review — efficiency curve across full 2hr session
+- Network analyser S21 data reviewed — M3 attenuation vs M2 baseline comparison
+
+### Key findings:
+- S3 dT/dt window (30s rolling) responding correctly to M3 heat retention profile
+- X3 zero-crossing gate showing no scheduling conflicts with S3 power modulation
+- M3 S21 attenuation: 17.6dB vs M2 16.9dB — M3 better shielding confirmed
+- MLX90393 noise floor during session: +2.0uT RMS — within <5uT CA1 threshold
+
+### Status: Session 2 analysis complete — Session 3 elevated ambient Week 2

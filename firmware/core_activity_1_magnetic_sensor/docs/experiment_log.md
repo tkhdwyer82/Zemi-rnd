@@ -293,3 +293,27 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
 
 ### Status: Static analysis complete — dynamic tests commence Week 2
+
+---
+
+## Phase 3 — Day 8 — 08 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-walk-01 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Dynamic test session 1 — children walking at normal pace
+- 10 pairs, 20 pairing attempts per pair = 200 total attempts
+- D+V3.1 firmware active — Z-lock threshold 68%, spike-gate >50uT
+- Ambient: X=1.91uT, Y=2.03uT, Z=2.41uT RMS — stable
+
+### Results:
+- Pairing success rate: 96.0% (192/200) — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 218ms — higher than static (203ms) as expected
+- Failures: 8 timeouts during device orientation change mid-walk
+
+### Analysis:
+- Z-lock maintained directional discrimination during walking pace
+- Slight increase in timeouts vs static — expected under dynamic conditions
+- 218ms mean time-to-pair acceptable for natural gesture interaction
+
+### Status: Walking tests complete — backpack EMI impact test Day 9
