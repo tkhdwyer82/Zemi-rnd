@@ -1,0 +1,11 @@
+# CA1 Phase 3 — Dynamic Walking UART Analysis
+# Date: 2026-05-09 | Tag: ca1-p3-dynamic-walk-02 | Personnel: Timothy Dwyer
+[2026-05-09 09:00:00] ANALYSIS_START: UART log review — Day 8 walking session
+[2026-05-09 09:30:00] Z_ANALYSIS: Failed attempts Z-axis 61-67% of total magnitude
+[2026-05-09 09:31:00] Z_ANALYSIS: Confirmed geometric failure — wrist angle below 68% threshold
+[2026-05-09 09:45:00] LATENCY: Dynamic mean 218ms vs static mean 196ms — 22ms overhead
+[2026-05-09 10:00:00] AGE_ANALYSIS: Ages 8-11 — 6 timeouts / Ages 12-15 — 2 timeouts
+[2026-05-09 10:01:00] AGE_ANALYSIS: 3x more orientation timeouts in younger cohort
+[2026-05-09 10:15:00] RECOMMENDATION: Firmware iteration — adjust Z-lock 68% to 65% for age 8-11
+[2026-05-09 10:30:00] FALSE_POSITIVE: 0 FP events across all dynamic attempts confirmed
+[2026-05-09 17:00:00] STATUS: UART analysis complete — backpack EMI test Day 10

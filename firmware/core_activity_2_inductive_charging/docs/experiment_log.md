@@ -371,3 +371,18 @@ charging efficiency (within ±3% of no-BLE baseline).
 - MLX90393 noise floor during session: +2.0uT RMS — within <5uT CA1 threshold
 
 ### Status: Session 2 analysis complete — Session 3 elevated ambient Week 2
+
+---
+
+## Phase 3B — Day 9 — 09 May 2026 (8 hours)
+**Tag:** ca2-p3b-session3-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 3 setup — elevated ambient stress test
+- Session 3 objective: validate S3 predictive ramp at elevated ambient (24.1C)
+- Configuration: S3+M2+X3 (M2 re-installed for stress comparison with session 1)
+- Environmental heater deployed to raise ambient from 21.2C to 24.1C
+- IR array re-verified at elevated ambient: all 5 points within ±0.2C
+- Protocol: identical to session 1 — 2hr run, 30min interval logging
+
+### Status: Session 3 setup complete — elevated ambient run Day 10

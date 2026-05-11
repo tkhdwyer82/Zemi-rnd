@@ -317,3 +317,23 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - 218ms mean time-to-pair acceptable for natural gesture interaction
 
 ### Status: Walking tests complete — backpack EMI impact test Day 9
+
+---
+
+## Phase 3 — Day 9 — 09 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-walk-02 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Dynamic test session 2 — UART log analysis from Day 8 walking session
+- Z-axis field value and angle reviewed at each pairing attempt
+- Latency histogram constructed: static vs dynamic comparison
+- Failure mode analysis: timeout distribution across participant age groups
+
+### Key findings:
+- Z-axis field values at failed attempts: 61-67% of total magnitude (below 68% lock threshold)
+- Confirmed: failures are geometric — wrist angle insufficient, not EMI or firmware error
+- Latency histogram: dynamic mean 218ms vs static mean 196ms — 22ms overhead
+- Age correlation: participants aged 8-11 showed 3x more orientation timeouts vs 12-15
+- Recommendation: firmware iteration to adjust Z-lock to 65% for younger age group
+
+### Status: UART analysis complete — backpack EMI impact test Day 10

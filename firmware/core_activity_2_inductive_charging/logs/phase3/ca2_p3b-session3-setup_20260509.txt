@@ -1,0 +1,14 @@
+# CA2 Phase 3B — Session 3 Setup (Elevated Ambient)
+# Date: 2026-05-09 | Tag: ca2-p3b-session3-setup | Personnel: Timothy Dwyer
+[2026-05-09 09:00:00] SETUP_START: Session 3 — elevated ambient stress test
+[2026-05-09 09:15:00] CONFIG: S3+M2+X3 — M2 re-installed for comparison with session 1
+[2026-05-09 09:30:00] HEATER: Environmental heater deployed — target ambient 24.1C
+[2026-05-09 10:00:00] AMBIENT: Room temp reached 24.1C — stable
+[2026-05-09 10:15:00] IR_VERIFY: 5-point verification at 24.1C ambient
+[2026-05-09 10:15:01] IR_CAL: Point 1 delta +0.14C — within ±0.2C spec
+[2026-05-09 10:15:02] IR_CAL: Point 2 delta -0.12C — within ±0.2C spec
+[2026-05-09 10:15:03] IR_CAL: Point 3 delta +0.18C — within ±0.2C spec
+[2026-05-09 10:15:04] IR_CAL: Point 4 delta +0.11C — within ±0.2C spec
+[2026-05-09 10:15:05] IR_CAL: Point 5 delta -0.15C — within ±0.2C spec
+[2026-05-09 10:30:00] PROTOCOL: Session 3 identical to session 1 — 2hr, 30min intervals
+[2026-05-09 17:00:00] STATUS: Session 3 setup complete — elevated ambient run Day 10
