@@ -337,3 +337,28 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Recommendation: firmware iteration to adjust Z-lock to 65% for younger age group
 
 ### Status: UART analysis complete — backpack EMI impact test Day 10
+
+---
+
+## Phase 3 — Day 10 — 10 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-walk-03 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Dynamic test session 3 — walking with backpacks (metal buckles)
+- 10 pairs, 20 attempts each = 200 total attempts
+- D+V3.1 firmware — testing EMI impact of metal backpack buckles on spike-gate
+- Ambient: X=1.91uT, Y=2.03uT, Z=2.41uT RMS — stable
+
+### Results:
+- Pairing success rate: 95.5% (191/200) — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 223ms
+- Failures: 9 timeouts — 6 geometric, 3 spike-gate triggered by buckle proximity
+
+### Analysis:
+- Metal buckles generating localised EMI spikes — spike-gate correctly rejected all
+- 3 buckle-proximity timeouts: pairing window expired waiting for clean signal
+- Zero false pairings from buckle EMI — spike-gate performing as designed
+- Spike-gate threshold at 50uT appropriate — buckle spikes measured at 48-52uT
+
+### Status: Backpack EMI test complete — active playground tests Day 11

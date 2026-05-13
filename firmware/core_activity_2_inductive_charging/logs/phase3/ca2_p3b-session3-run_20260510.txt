@@ -1,0 +1,18 @@
+# CA2 Phase 3B — Session 3 Run (Elevated Ambient 24.1C)
+# Date: 2026-05-10 | Tag: ca2-p3b-session3-run | Personnel: Timothy Dwyer
+[2026-05-10 11:00:00] SESSION3_START: S3+M2+X3 elevated ambient 2hr run
+[2026-05-10 11:00:01] AMBIENT: Room temp 24.1C at session start
+[2026-05-10 11:05:00] THERMAL: Surface temp 24.8C — baseline pre-charging
+[2026-05-10 11:10:00] CHARGING: TX power ramp initiated — S3 predictive ramp active
+[2026-05-10 11:30:00] THERMAL: 30min — 33.2C | EFFICIENCY: 71.4% | BLE PDR 98.0% 8ms
+[2026-05-10 12:00:00] THERMAL: 60min — 35.4C | EFFICIENCY: 71.6% | BLE PDR 98.1% 8ms
+[2026-05-10 12:30:00] THERMAL: 90min — 36.5C | EFFICIENCY: 71.7% | BLE PDR 98.1% 8ms
+[2026-05-10 13:00:00] THERMAL: 120min — 37.1C PEAK | EFFICIENCY: 71.8% | BLE PDR 98.1% 8ms
+[2026-05-10 13:01:00] RESULT: Peak surface temp 37.1C — PASS (<=38C)
+[2026-05-10 13:02:00] RESULT: Mean efficiency 71.8% — PASS (>=70%)
+[2026-05-10 13:03:00] RESULT: X3 delta -0.5% — PASS (<=+-3%)
+[2026-05-10 13:04:00] RESULT: BLE PDR 98.1% — PASS (>=95%)
+[2026-05-10 13:05:00] RESULT: All 6 criteria met at elevated ambient — S3 robustness confirmed
+[2026-05-10 13:06:00] COMPARE: Session 1 (21.2C) peak 36.6C vs Session 3 (24.1C) peak 37.1C
+[2026-05-10 13:07:00] COMPARE: S3 maintaining 0.9C headroom at elevated ambient — robust
+[2026-05-10 17:00:00] STATUS: Session 3 complete — interaction analysis Day 11

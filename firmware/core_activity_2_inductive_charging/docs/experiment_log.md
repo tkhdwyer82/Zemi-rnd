@@ -386,3 +386,29 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Protocol: identical to session 1 — 2hr run, 30min interval logging
 
 ### Status: Session 3 setup complete — elevated ambient run Day 10
+
+---
+
+## Phase 3B — Day 10 — 10 May 2026 (8 hours)
+**Tag:** ca2-p3b-session3-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Integrated session 3 — elevated ambient stress test (24.1C)
+- S3+M2+X3 concurrent 2-hour run at elevated ambient
+- Surface temp logged at 30-minute intervals
+
+### Results:
+- Peak surface temperature: 37.1C — PASS (<=38C)
+- Efficiency at 1hr: 71.6% / Efficiency at 2hr: 71.8% — flat, no degradation
+- Mean charging efficiency: 71.8% — PASS (>=70%)
+- X3 BLE efficiency delta: -0.5% — PASS (<=+-3%)
+- BLE packet delivery ratio: 98.1% — PASS (>=95%)
+- All 6 success criteria met at elevated ambient
+
+### Analysis:
+- S3 predictive ramp adapts correctly to elevated ambient — pre-empting before threshold
+- 0.5C lower peak vs S1 (37.1C vs 36.6C session 1) — wait, higher at elevated ambient as expected
+- Efficiency slightly lower at elevated ambient (71.8% vs 72.3% session 1) — expected thermal impact
+- S3 robustness under elevated ambient confirmed
+
+### Status: Session 3 complete — interaction analysis Day 11

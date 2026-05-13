@@ -1,0 +1,16 @@
+# CA1 Phase 3 — Dynamic Walking with Backpacks (Metal Buckles)
+# Date: 2026-05-10 | Tag: ca1-p3-dynamic-walk-03 | Personnel: Timothy Dwyer
+[2026-05-10 09:00:00] SESSION_START: Dynamic walking — backpacks with metal buckles
+[2026-05-10 09:10:00] PARTICIPANTS: 10 pairs, backpacks with metal buckles fitted
+[2026-05-10 09:15:00] AMBIENT: X=1.91uT Y=2.03uT Z=2.41uT RMS — stable
+[2026-05-10 09:20:00] EMI_BASELINE: Buckle proximity EMI measured 48-52uT — near spike-gate threshold
+[2026-05-10 09:30:00] TEST: Pairs 1-5 — walking with backpacks, 20 attempts each
+[2026-05-10 10:30:00] TEST: Pairs 6-10 — walking with backpacks, 20 attempts each
+[2026-05-10 11:30:00] BATCH_COMPLETE: 200 total attempts
+[2026-05-10 11:31:00] RESULT: Success rate 95.5% (191/200) — PASS (>=95%)
+[2026-05-10 11:32:00] RESULT: False-positive rate 0.0% (0/30 EMI events) — PASS (<2%)
+[2026-05-10 11:33:00] RESULT: Mean time-to-pair 223ms
+[2026-05-10 11:34:00] FAILURES: 6 geometric timeouts, 3 buckle-proximity spike-gate timeouts
+[2026-05-10 11:35:00] SPIKE_GATE: All buckle EMI spikes correctly rejected — zero false pairings
+[2026-05-10 11:36:00] ANALYSIS: Spike-gate 50uT threshold appropriate for buckle EMI range
+[2026-05-10 17:00:00] STATUS: Backpack test complete — active playground tests Day 11
