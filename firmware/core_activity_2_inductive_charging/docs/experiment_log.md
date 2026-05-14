@@ -412,3 +412,24 @@ charging efficiency (within ±3% of no-BLE baseline).
 - S3 robustness under elevated ambient confirmed
 
 ### Status: Session 3 complete — interaction analysis Day 11
+
+---
+
+## Phase 3B — Day 11 — 11 May 2026 (8 hours)
+**Tag:** ca2-p3b-interaction-01 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer, Lukas Kovac
+
+### Work performed:
+- Cross-system interaction analysis — S3 thermal vs X3 BLE gate timing
+- Lukas Kovac present for parallel instrumentation review
+- S3 dT/dt 30s rolling window vs X3 zero-crossing gate scheduling characterised
+- Power modulation events from S3 logged against X3 gate timing windows
+- No scheduling conflicts detected across 120-minute analysis session
+
+### Key findings:
+- S3 power reduction events occur at 8-45 second intervals (variable)
+- X3 zero-crossing gate operates at 125kHz (8us period, <3us window)
+- Zero temporal overlap between S3 power events and X3 gate windows confirmed
+- System interaction: fully decoupled at firmware scheduling level
+- MLX90393 noise floor during interaction analysis: +1.8uT RMS — within CA1 threshold
+
+### Status: Interaction analysis 1 complete — ferrite interaction Day 12

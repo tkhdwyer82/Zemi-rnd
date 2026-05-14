@@ -362,3 +362,29 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Spike-gate threshold at 50uT appropriate — buckle spikes measured at 48-52uT
 
 ### Status: Backpack EMI test complete — active playground tests Day 11
+
+---
+
+## Phase 3 — Day 11 — 11 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-play-01 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer, Lukas Kovac
+
+### Work performed:
+- Dynamic test session 4 — active playground environment
+- 10 pairs, 20 attempts each = 200 total attempts
+- Running, rapid gesture pairing, high physical activity
+- Lukas Kovac present — backup UART logger deployed for parallel capture
+- Ambient: X=1.92uT, Y=2.01uT, Z=2.43uT RMS — stable
+
+### Results:
+- Pairing success rate: 94.5% (189/200) — MARGINAL (>=95% target)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 241ms — highest recorded, active movement impact
+- Failures: 11 timeouts — angular velocity too high for 150ms dwell window
+
+### Analysis:
+- First result below 95% threshold — active play more demanding than walking
+- All failures geometric — no EMI or wrong-device pairings
+- 150ms dwell window too short for rapid gesture under running conditions
+- Recommendation: firmware iteration — dwell window adjustment for dynamic mode
+
+### Status: Active play result marginal — firmware iteration Day 12
