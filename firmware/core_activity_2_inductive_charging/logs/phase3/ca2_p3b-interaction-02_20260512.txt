@@ -1,0 +1,12 @@
+# CA2 Phase 3B — Cross-System Interaction Analysis 2 (M2 Curvature vs X3)
+# Date: 2026-05-12 | Tag: ca2-p3b-interaction-02 | Personnel: Timothy Dwyer
+[2026-05-12 09:00:00] ANALYSIS_START: M2 curvature effect on X3 zero-crossing timing
+[2026-05-12 09:30:00] COIL: Resonant frequency at 0mm (flat): 125.0kHz — baseline
+[2026-05-12 10:00:00] COIL: Resonant frequency at 10mm radius: 125.3kHz — +0.3kHz shift
+[2026-05-12 10:30:00] COIL: Resonant frequency at 20mm radius: 125.6kHz — +0.6kHz shift
+[2026-05-12 11:00:00] COIL: Resonant frequency at 30mm radius: 125.9kHz — +0.9kHz shift
+[2026-05-12 11:30:00] COIL: Resonant frequency at 40mm radius: 126.2kHz — +1.2kHz shift
+[2026-05-12 12:00:00] X3: Zero-crossing window <3us confirmed at all curvature angles
+[2026-05-12 12:30:00] X3: Gate synchronisation lock maintained across full curvature range
+[2026-05-12 13:00:00] EFFICIENCY: Frequency shift efficiency impact -0.3% — negligible
+[2026-05-12 17:00:00] STATUS: M2 curvature vs X3 interaction PASS — no sync loss detected

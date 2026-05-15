@@ -1,0 +1,13 @@
+# CA1 Phase 3 — Firmware Iteration D+V3.2
+# Date: 2026-05-12 | Tag: ca1-p3-dynamic-play-02 | Personnel: Timothy Dwyer
+[2026-05-12 09:00:00] FW_ITER_START: D+V3.2 dynamic mode firmware development
+[2026-05-12 09:30:00] CHANGE: Dwell window dynamic mode 150ms -> 100ms
+[2026-05-12 09:31:00] CHANGE: Motion flag threshold angular velocity >15 deg/s
+[2026-05-12 09:32:00] CHANGE: Static mode D+V3.1 behaviour preserved
+[2026-05-12 10:00:00] CODE: noise_filter_v32.c committed to branch ca1-p3-v3.2-dynamic-mode
+[2026-05-12 10:30:00] FLASH: D+V3.2 flashed to all 30 ESP32-S3 boards
+[2026-05-12 11:00:00] SIM: Simulation test harness updated — dynamic mode scenarios added
+[2026-05-12 11:30:00] SIM: 95 dynamic scenarios — 94/95 PASS (98.9% simulated success)
+[2026-05-12 12:00:00] REG: Static mode regression — all 12 filter×PSM combinations PASS
+[2026-05-12 12:30:00] VERIFY: D+V3.2 ready for live re-test Day 13
+[2026-05-12 17:00:00] STATUS: Firmware iteration complete — active play re-test Day 13

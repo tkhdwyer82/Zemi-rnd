@@ -433,3 +433,23 @@ charging efficiency (within ±3% of no-BLE baseline).
 - MLX90393 noise floor during interaction analysis: +1.8uT RMS — within CA1 threshold
 
 ### Status: Interaction analysis 1 complete — ferrite interaction Day 12
+
+---
+
+## Phase 3B — Day 12 — 12 May 2026 (8 hours)
+**Tag:** ca2-p3b-interaction-02 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Cross-system interaction analysis 2 — M2 ferrite curvature effect on X3 zero-crossing timing
+- M2 flexible ferrite curved geometry tested against X3 gate timing at 40mm radius
+- Coil impedance measured at curved vs flat geometry — impact on zero-crossing window
+- Network analyser S21 measurements across 5 curvature angles (0/10/20/30/40mm radius)
+
+### Key findings:
+- M2 at 40mm radius: coil resonant frequency shift +1.2kHz vs flat (125.0kHz → 126.2kHz)
+- Zero-crossing window remains <3us across all curvature angles tested
+- X3 gate synchronisation maintains lock across full curvature range
+- Efficiency impact of frequency shift: -0.3% (negligible — within measurement noise)
+- M2 curvature effect on X3 gate: PASS — no synchronisation loss detected
+
+### Status: Interaction analysis 2 complete — full concurrent analysis Day 13

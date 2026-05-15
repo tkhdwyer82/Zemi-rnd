@@ -388,3 +388,26 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Recommendation: firmware iteration — dwell window adjustment for dynamic mode
 
 ### Status: Active play result marginal — firmware iteration Day 12
+
+---
+
+## Phase 3 — Day 12 — 12 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-play-02 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Firmware iteration — D+V3.2 developed and committed
+- Changes from D+V3.1:
+  - Dwell window: 150ms → 100ms for dynamic mode (gyro motion flag active)
+  - Z-lock threshold: maintained at 68% (sufficient discrimination confirmed)
+  - Motion flag: triggers when angular velocity >15 deg/s on any axis
+  - Static mode: D+V3.1 behaviour preserved (150ms dwell, no motion flag)
+- D+V3.2 flashed to all 30 boards
+- Simulation test harness updated — dynamic mode scenarios added
+
+### Results:
+- Firmware committed to branch ca1-p3-v3.2-dynamic-mode
+- Simulation test: 95 dynamic mode scenarios — 94/95 PASS (98.9% simulated)
+- Static mode regression: all 12 filter×PSM combinations confirmed unchanged
+- Ready for live re-test Day 13
+
+### Status: D+V3.2 firmware complete — active play re-test Day 13
