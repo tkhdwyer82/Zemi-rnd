@@ -411,3 +411,20 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Ready for live re-test Day 13
 
 ### Status: D+V3.2 firmware complete — active play re-test Day 13
+
+---
+
+## Phase 3 — Day 12 — 12 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-play-02 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Firmware iteration — D+V3.2 developed and committed
+- Changes from D+V3.1:
+  - Dwell window: 150ms to 100ms for dynamic mode (gyro motion flag active)
+  - Motion flag: triggers when angular velocity >15 deg/s on any axis
+  - Static mode: D+V3.1 behaviour preserved (150ms dwell, no motion flag)
+- D+V3.2 flashed to all 30 boards
+- Simulation test: 95 dynamic scenarios — 94/95 PASS (98.9% simulated)
+- Static mode regression: all 12 filter×PSM combinations confirmed unchanged
+
+### Status: D+V3.2 firmware complete — active play re-test Day 13

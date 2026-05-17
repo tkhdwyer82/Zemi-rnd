@@ -453,3 +453,21 @@ charging efficiency (within ±3% of no-BLE baseline).
 - M2 curvature effect on X3 gate: PASS — no synchronisation loss detected
 
 ### Status: Interaction analysis 2 complete — full concurrent analysis Day 13
+
+---
+
+## Phase 3B — Day 12 — 12 May 2026 (8 hours)
+**Tag:** ca2-p3b-interaction-02 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Cross-system interaction analysis 2 — M2 ferrite curvature effect on X3 zero-crossing timing
+- Coil resonant frequency measured at 5 curvature angles (0/10/20/30/40mm radius)
+- Zero-crossing window verified across all curvature angles
+
+### Key findings:
+- M2 at 40mm radius: resonant frequency shift +1.2kHz (125.0 -> 126.2kHz)
+- Zero-crossing window remains <3us across all curvature angles
+- X3 gate synchronisation maintains lock — no sync loss detected
+- Efficiency impact of frequency shift: -0.3% (negligible)
+
+### Status: Interaction analysis 2 complete — full concurrent analysis Day 13
