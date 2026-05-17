@@ -1,0 +1,14 @@
+# CA2 Phase 3B — Interaction Analysis 3 (Full Concurrent MLX Noise)
+# Date: 2026-05-13 | Tag: ca2-p3b-interaction-03 | Personnel: Timothy Dwyer
+[2026-05-13 09:00:00] ANALYSIS_START: Full concurrent load MLX90393 noise floor
+[2026-05-13 09:15:00] CONFIG: S3+M2+X3 all active simultaneously
+[2026-05-13 09:30:00] MLX: Baseline noise floor (no charging): 0.3uT RMS
+[2026-05-13 10:00:00] MLX: 30min concurrent load: +1.8uT RMS
+[2026-05-13 10:30:00] MLX: 60min concurrent load: +2.0uT RMS
+[2026-05-13 11:00:00] MLX: 90min concurrent load: +2.1uT RMS
+[2026-05-13 11:30:00] MLX: 120min concurrent load: +2.1uT RMS — stable
+[2026-05-13 12:00:00] BREAKDOWN: X3 BLE contribution: +0.6uT RMS
+[2026-05-13 12:01:00] BREAKDOWN: M2 ferrite contribution: +1.9uT RMS
+[2026-05-13 12:02:00] BREAKDOWN: S3 thermal events: no detectable MLX impact
+[2026-05-13 12:30:00] RESULT: Full concurrent MLX noise +2.1uT RMS — PASS (<5uT CA1 threshold)
+[2026-05-13 17:00:00] STATUS: MLX concurrent analysis complete — six criteria check Day 14

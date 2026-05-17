@@ -471,3 +471,24 @@ charging efficiency (within ±3% of no-BLE baseline).
 - Efficiency impact of frequency shift: -0.3% (negligible)
 
 ### Status: Interaction analysis 2 complete — full concurrent analysis Day 13
+
+---
+
+## Phase 3B — Day 13 — 13 May 2026 (8 hours)
+**Tag:** ca2-p3b-interaction-03 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Cross-system interaction analysis 3 — all three systems concurrent
+- MLX90393 noise floor measured under full S3+M2+X3 concurrent load
+- Thermal, charging, and BLE systems all active simultaneously
+- Noise floor logged at 5-minute intervals across 120-minute session
+
+### Key findings:
+- MLX90393 noise floor under full concurrent load: +2.1uT RMS
+- Within the <5uT RMS CA1 cross-activity threshold — PASS
+- S3 thermal events: no impact on MLX noise floor detected
+- X3 BLE gate: +0.6uT RMS contribution confirmed (consistent with Phase 2)
+- M2 ferrite: +1.9uT RMS contribution (consistent with Phase 2)
+- Combined concurrent load well within CA1 noise budget
+
+### Status: MLX concurrent analysis complete — six criteria verification Day 14

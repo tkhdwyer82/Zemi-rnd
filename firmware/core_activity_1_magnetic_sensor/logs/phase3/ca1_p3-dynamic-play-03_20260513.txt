@@ -1,0 +1,23 @@
+# CA1 Phase 3 — Active Playground Re-test (D+V3.2)
+# Date: 2026-05-13 | Tag: ca1-p3-dynamic-play-03 | Personnel: Timothy Dwyer
+[2026-05-13 09:00:00] SESSION_START: Active playground re-test — D+V3.2 firmware
+[2026-05-13 09:10:00] PARTICIPANTS: 10 pairs, same cohort as Day 11
+[2026-05-13 09:15:00] AMBIENT: X=1.91uT Y=2.02uT Z=2.42uT RMS — stable
+[2026-05-13 09:20:00] MOTION_FLAG: Confirmed active on all 30 boards at running pace
+[2026-05-13 09:30:00] TEST: Pair 1 — running, rapid gesture, 20 attempts — 20/20 PASS 208ms
+[2026-05-13 09:52:00] TEST: Pair 2 — running, rapid gesture, 20 attempts — 19/20 PASS 217ms
+[2026-05-13 10:14:00] TEST: Pair 3 — running, rapid gesture, 20 attempts — 20/20 PASS 211ms
+[2026-05-13 10:36:00] TEST: Pair 4 — running, rapid gesture, 20 attempts — 20/20 PASS 209ms
+[2026-05-13 10:58:00] TEST: Pair 5 — running, rapid gesture, 20 attempts — 19/20 PASS 219ms
+[2026-05-13 11:20:00] TEST: Pair 6 — running, rapid gesture, 20 attempts — 20/20 PASS 213ms
+[2026-05-13 11:42:00] TEST: Pair 7 — running, rapid gesture, 20 attempts — 19/20 PASS 221ms
+[2026-05-13 12:04:00] TEST: Pair 8 — running, rapid gesture, 20 attempts — 18/20 PASS 218ms
+[2026-05-13 12:26:00] TEST: Pair 9 — running, rapid gesture, 20 attempts — 20/20 PASS 212ms
+[2026-05-13 12:48:00] TEST: Pair 10 — running, rapid gesture, 20 attempts — 18/20 PASS 214ms
+[2026-05-13 13:00:00] BATCH_COMPLETE: 200 total attempts
+[2026-05-13 13:01:00] RESULT: Success rate 96.5% (193/200) — PASS (>=95%)
+[2026-05-13 13:02:00] RESULT: False-positive rate 0.0% (0/30 EMI events) — PASS
+[2026-05-13 13:03:00] RESULT: Mean time-to-pair 214ms — improved from 241ms Day 11
+[2026-05-13 13:04:00] COMPARE: Day 11 D+V3.1: 94.5% 241ms | Day 13 D+V3.2: 96.5% 214ms
+[2026-05-13 13:05:00] RESULT: D+V3.2 firmware iteration validated — selected for Phase 3
+[2026-05-13 17:00:00] STATUS: D+V3.2 validated — varied orientation tests Day 14

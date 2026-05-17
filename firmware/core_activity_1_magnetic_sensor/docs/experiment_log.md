@@ -428,3 +428,28 @@ Miniaturised MLX90393 in TPU/silicone housing with EMI shielding will maintain
 - Static mode regression: all 12 filter×PSM combinations confirmed unchanged
 
 ### Status: D+V3.2 firmware complete — active play re-test Day 13
+
+---
+
+## Phase 3 — Day 13 — 13 May 2026 (4 hours)
+**Tag:** ca1-p3-dynamic-play-03 | **Code:** ZEM-CA1-P3 | **Personnel:** Timothy Dwyer
+
+### Work performed:
+- Active playground re-test with D+V3.2 firmware
+- Same 10 pairs, 20 attempts each = 200 total attempts
+- Running, rapid gesture conditions — identical to Day 11
+- Motion flag confirmed active on all boards during running conditions
+
+### Results:
+- Pairing success rate: 96.5% (193/200) — PASS (>=95%)
+- False-positive rate: 0.0% (0/30 EMI events) — PASS (<2%)
+- Mean time-to-pair: 214ms — improved from 241ms (Day 11)
+- Failures: 7 timeouts — down from 11 (Day 11), improvement confirmed
+
+### Analysis:
+- D+V3.2 dynamic dwell 100ms resolves the primary failure mode from Day 11
+- 96.5% under active playground conditions — above 95% threshold
+- 27ms improvement in mean time-to-pair vs D+V3.1
+- Firmware iteration validated — D+V3.2 selected for Phase 3 dynamic testing
+
+### Status: D+V3.2 validated — varied orientation tests Day 14
