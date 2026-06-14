@@ -1,0 +1,7 @@
+[2026-05-16 09:15:00] Filter Comparison - Baseline (A) vs Moving Avg (B) vs Kalman (C) vs Hybrid (D)
+Raw Signal: [12.4, 45.6, 89.3, ...]
+Filter A (Baseline): Noise floor 18.7µT, FP potential high
+Filter B (MA 8): Smoothed, Noise 9.2µT
+Filter C (Kalman Q=0.1 R=5): Noise 4.1µT, lag minimal
+Filter D (Hybrid Spike+Kalman): Noise 2.3µT, best for GenAlpha motion
+D+V3 selected for production.

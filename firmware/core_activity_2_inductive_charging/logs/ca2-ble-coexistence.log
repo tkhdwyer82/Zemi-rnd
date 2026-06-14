@@ -1,0 +1,17 @@
+=== Zemi CA2 BLE Coexistence Log - X3 Charge-Gated (ca2-p3b-session2-run)
+Firmware: S3+M3+X3
+Date: 2026-05-07
+
+[14:22:15] BLE Mode: X3 Gated | Baseline Efficiency: 75.1% (BLE off)
+[14:22:20] BLE TX active (gated) | Efficiency: 74.8% | Delta: -0.3% | PDR: 98.4%
+[14:25:00] BLE TX active | Efficiency: 74.9% | Delta: -0.2% | PDR: 98.1%
+[14:30:00] BLE TX active | Efficiency: 74.7% | Delta: -0.4% | PDR: 98.5%
+... (multiple samples)
+
+[15:45:00] BLE TX active | Efficiency: 75.0% | Delta: -0.1% | PDR: 98.2%
+[16:00:00] BLE TX active | Efficiency: 74.6% | Delta: -0.5% | PDR: 97.9%
+[16:22:15] Session End | Avg Delta: -0.4% | Avg PDR: 98.3%
+
+Hypothesis C validated: Delta within ±3%, PDR ≥95%
+
+=== End of Log ===

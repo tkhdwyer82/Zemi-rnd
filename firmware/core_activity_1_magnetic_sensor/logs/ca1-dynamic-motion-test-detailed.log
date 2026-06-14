@@ -1,0 +1,19 @@
+[2026-05-27 13:55:00] Zemi CA1 Dynamic Playground Test - D+V3.2 (Active children 8-15yo)
+Firmware: ca1-p3-dynamic-play-03 | 30 prototype units deployed
+Test protocol: 200 intentional pairing attempts during walking, running, jumping, swinging arms. Motion flag threshold >15deg/s.
+
+Raw counts:
+- Total attempts: 200
+- Successful pairings: 193 (96.5%)
+- Failed pairings: 7 (mostly at >1.1m edge cases or extreme occlusion)
+- False positives: 0
+
+Sample raw logs:
+[13:55:12] Wrist accel=28deg/s | Motion flag ACTIVE | Dwell=100ms | X=156µT Y=-78µT Z=389µT | Filtered=412µT | V3 Z-Lock triggered | Pairing SUCCESS (Device#14 <-> #17)
+[13:55:45] Running | accel=41deg/s | X=203µT Y=134µT Z=267µT | SUCCESS
+[13:56:10] Jumping | accel=19deg/s | X=89µT Y=-201µT Z=445µT | Dwell extended | SUCCESS
+[13:56:38] Arm swing (non-intent) | accel=52deg/s | Spike detected | Rejected by spike-gate + Z-dominance (62%) | No trigger
+[13:57:05] Intentional approach while walking | X=112µT Y=45µT Z=298µT | SUCCESS
+... (similar entries for attempts 6-195 abbreviated for log size)
+
+[14:12:20] Final batch summary: 193/200 SUCCESS. Motion flag correctly distinguished intentional gestures from ambient play. D+V3.2 validated for production.

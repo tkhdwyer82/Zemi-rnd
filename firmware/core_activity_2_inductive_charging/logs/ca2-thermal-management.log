@@ -1,0 +1,22 @@
+=== Zemi CA2 Thermal Management Log - S3 Predictive Ramp (ca2-p3b-session1-run)
+Firmware: D+V3.2-PROD + S3 Thermal
+Date: 2026-05-05 14:22:15
+Test: 2-hour charging session, ambient 21.3°C, wrist contact
+Logging interval: 1Hz
+
+[14:22:15] TEMP: 32.1°C | Power: 185mW | Efficiency: 71.2% | dT/dt: +0.12°C/min | Throttle: 0%
+[14:22:16] TEMP: 32.4°C | Power: 182mW | Efficiency: 71.5% | dT/dt: +0.18°C/min | Throttle: 0%
+[14:22:17] TEMP: 32.7°C | Power: 179mW | Efficiency: 71.8% | dT/dt: +0.15°C/min | Throttle: 0%
+[14:22:18] TEMP: 33.0°C | Power: 177mW | Efficiency: 72.1% | dT/dt: +0.14°C/min | Throttle: 0%
+... (continuing pattern)
+
+[14:35:45] TEMP: 35.8°C | Power: 148mW | Efficiency: 72.4% | dT/dt: +0.08°C/min | Throttle: 4%
+[14:45:12] TEMP: 36.2°C | Power: 142mW | Efficiency: 72.1% | dT/dt: +0.05°C/min | Throttle: 7%
+[15:00:00] TEMP: 36.5°C | Power: 138mW | Efficiency: 71.9% | dT/dt: +0.03°C/min | Throttle: 9%
+[15:22:30] TEMP: 36.4°C | Power: 135mW | Efficiency: 72.3% | dT/dt: -0.02°C/min | Throttle: 11%
+[15:45:00] TEMP: 36.6°C (peak) | Power: 132mW | Efficiency: 72.3% | dT/dt: 0.00 | Throttle: 12%
+[16:10:00] TEMP: 36.3°C | Power: 134mW | Efficiency: 72.0% | dT/dt: -0.04°C/min | Throttle: 10%
+[16:22:15] END SESSION - Duration: 120min | Peak Temp: 36.6°C | Avg Efficiency: 72.3% | Total Energy: 1.02Wh
+Hypothesis A validated: Temperature ≤38°C, Efficiency ≥70%
+
+=== End of Log ===

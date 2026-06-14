@@ -1,0 +1,15 @@
+[2026-05-28 09:30:00] Zemi CA1 Multi-Device Session - Classroom (12 concurrent units, D+V3.2-PROD)
+Firmware: tkhdwyer82/Zemi-rnd @ ca1-p3-static-classroom-03
+Test conditions: Static pairing at 0.5m-1.0m, mixed orientations, background EMI from WiFi/phones.
+
+[09:30:15] Device#01 (Zemi-001) -> Device#02 (Zemi-002): Intentional handshake at 0.75m | X=124µT Y=-45µT Z=312µT | Filtered mag=342µT | State: V3 Z-Lock +150ms dwell | SUCCESS (pair established, RSSI -68dBm)
+[09:30:42] Device#03 (Zemi-003) -> Device#05 (Zemi-005): 1.0m | X=68µT Y=92µT Z=215µT | Filtered=238µT | V3 triggered | SUCCESS
+[09:31:10] Device#07 -> Device#08: 0.5m running approach | X=189µT Y=-112µT Z=456µT | Motion flag=22deg/s | Dwell reduced to 100ms | SUCCESS
+[09:31:55] Device#04 -> Device#09: Ambient interference spike (42µT) | Spike-gate rejected | No pairing trigger
+[09:32:20] Device#02 -> Device#11: 0.9m | X=95µT Y=67µT Z=278µT | SUCCESS
+[09:33:05] Device#06 -> Device#12: 1.0m | X=51µT Y=134µT Z=189µT | SUCCESS
+[09:33:48] Device#01 -> Device#10: Intentional | SUCCESS
+[09:34:15] Device#05 -> Device#03: Cross-pair attempt | SUCCESS
+[09:34:50] Device#08 -> Device#07: SUCCESS
+
+Summary: 8/8 intentional pairings successful (100% in this batch). 0 false positives across 12 units. D+V3.2 stable. Total test duration: 5 minutes. Logged to UART + Git tag ca1-p3-static-classroom-03.

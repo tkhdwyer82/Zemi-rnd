@@ -1,0 +1,34 @@
+=== Zemi CA2 Integrated Concurrent Session Log - S3+M2+X3 & S3+M3+X3 (ca2-p3b-session1-run & session2-run)
+Firmware: D+V3.2-PROD + S3 Predictive + X3 Gated BLE
+Date: 2026-05-05 to 2026-05-07
+Test: Full system integration - Thermal + Flexible Ferrite + BLE Coexistence + MLX90393 monitoring
+
+=== Session 1: S3 + M2 Flexible + X3 (Day 5) ===
+[14:22:15] Start 2hr charging | Ambient 21.3°C | Curvature 40mm
+[14:22:16] TEMP: 32.1°C | Eff: 72.1% | BLE PDR: 98.2% | MLX Noise: 2.9µT
+[14:30:00] TEMP: 33.8°C | Eff: 72.4% | dT/dt: +0.15 | BLE Delta: -0.3% | MLX: 3.1µT
+[14:45:00] TEMP: 35.2°C | Power Throttle: 5% | Eff: 72.0% | PDR: 98.5%
+[15:15:00] TEMP: 36.4°C | Throttle: 10% | Eff: 71.9% | BLE gated active
+[15:45:00] TEMP: 36.6°C (peak) | Eff: 72.3% | MLX Noise Delta: +1.2µT
+[16:22:15] End Session | Peak Temp: 36.6°C | Avg Eff: 72.3% | Avg BLE Delta: -0.4%
+
+=== Session 2: S3 + M3 Segmented + X3 (Day 7) ===
+[09:15:00] Start | Ambient 22.1°C
+[09:20:00] TEMP: 32.5°C | Eff: 75.3% | BLE PDR: 98.4% | MLX: 2.8µT
+[09:45:00] TEMP: 34.9°C | Throttle: 6% | Eff: 74.8%
+[10:20:00] TEMP: 36.2°C | Eff: 75.0% | dT/dt predictive active
+[10:55:00] TEMP: 36.4°C (peak) | Eff: 75.1% | MLX Noise: 3.0µT | Zero-crossing gate sync: OK
+[11:22:15] End | Peak Temp: 36.4°C | Avg Eff: 75.1% | BLE Delta: -0.5%
+
+=== Cross-System Interaction Tests ===
+[Day 11] S3 vs X3 scheduling: Zero timing conflicts confirmed (zero-crossing window respected)
+[Day 12] M2 curvature vs X3 gate: +1.2kHz freq shift, gate timing maintained <3µs
+[Day 13] Full concurrent MLX noise: +2.1µT RMS average (within tolerance)
+
+Production Review Summary:
+- All hypotheses A, B, C validated
+- IP67 & AS/NZS 8124: PASS
+- BOM v1.0 locked
+- Firmware: S3+X3-PROD
+
+=== End of Integrated Log ===

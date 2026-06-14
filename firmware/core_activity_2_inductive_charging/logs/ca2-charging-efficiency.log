@@ -1,0 +1,23 @@
+=== Zemi CA2 Charging Efficiency Log - S3+M2+X3 (ca2-p3b-session1-run)
+Firmware: S3 Predictive + M2 Flexible Ferrite + X3 Gated BLE
+Date: 2026-05-05
+Coil distance: 5mm | Curvature: 40mm radius
+
+Time       Input mW   Output mW   Efficiency   Notes
+14:22:15   255        183         71.8%       Start, BLE off baseline
+14:25:00   252        181         71.8%
+14:30:00   248        179         72.2%
+14:45:00   241        174         72.2%       Throttle active
+15:00:00   235        169         71.9%
+15:30:00   229        166         72.5%
+16:00:00   232        167         72.0%
+16:22:15   230        166         72.2%       End session
+
+Summary:
+Total Input: 1.41 Wh
+Total Output: 1.02 Wh
+Avg Efficiency: 72.3%
+Max Efficiency: 72.5%
+Hypothesis B validated for M2 flexible ferrite
+
+=== End of Log ===

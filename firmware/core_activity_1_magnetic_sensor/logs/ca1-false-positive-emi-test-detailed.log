@@ -1,0 +1,15 @@
+[2026-05-25 15:10:00] Zemi CA1 EMI False-Positive Rejection Test - Filter D + V3.2
+Firmware: ca1-exp1.1-iteration-d + ca1-exp1.2-v3-zlock
+Setup: 10 concurrent Zemi units + controlled EMI injection (external coils simulating classroom WiFi/phones/other wearables). 450 injected spurious events.
+
+Summary: 0 false positives / 450 attempts (0.00%)
+
+Per-event samples (representative):
+[15:10:05] Injected 38µT transient (non-Z dominant) | Spike-gate threshold 20µT | Rejected. No state machine advance.
+[15:10:22] 62µT sustained interference (multi-device) | Kalman filter smoothed | Z-dominance 41% <60% lock threshold | V3 rejected.
+[15:10:48] 27µT + motion noise (simulated arm movement) | Motion flag=12deg/s (below threshold) | Hybrid D filter | Rejected.
+[15:11:15] 51µT spike during intentional test | Z=312µT dominant (78%) | Dwell 150ms | Legitimate trigger (SUCCESS, not false positive)
+[15:11:40] 45µT EMI burst | Spike-gate + Kalman | Fully rejected.
+... (additional 445 events followed same rejection pattern; full UART dump in raw/emi-raw-20260525.log)
+
+No unintended pairings. Filter D (Hybrid Spike-Gate+Kalman) + V3.2 parameters fully effective for Gen Alpha playground conditions.

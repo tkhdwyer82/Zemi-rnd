@@ -1,0 +1,4 @@
+[2026-05-20 10:45:22] V1 Threshold: Pairing trigger at Z>180µT - SUCCESS (intentional)
+[2026-05-20 10:45:35] V2 Dwell: False trigger rejected (dwell <150ms)
+[2026-05-20 10:46:01] V3 Z-Lock: Pairing SUCCESS at 0.8m, dwell 150ms
+[2026-05-20 10:46:12] V3: False positive attempt rejected (Z-axis dominance <70%)

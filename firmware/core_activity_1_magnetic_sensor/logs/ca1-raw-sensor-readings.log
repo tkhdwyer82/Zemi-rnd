@@ -1,0 +1,6 @@
+[2026-05-15 14:32:10.123] INFO: MLX90393 Raw Readings (µT)
+X: 12.45, Y: -8.67, Z: 145.23 | Motion: false
+[2026-05-15 14:32:11.124] INFO: X: 45.67, Y: 23.89, Z: 152.34 | Motion: true (gesture)
+[2026-05-15 14:32:12.125] INFO: X: 10.12, Y: -7.45, Z: 148.90 | Motion: false
+[2026-05-15 14:32:13.126] INFO: X: 89.34, Y: 67.12, Z: 210.56 | Motion: true (pairing gesture)
+... (sampled over 60s test)

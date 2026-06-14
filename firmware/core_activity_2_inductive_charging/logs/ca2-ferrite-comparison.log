@@ -1,0 +1,31 @@
+=== Zemi CA2 Ferrite Comparison Log - M1 vs M2 vs M3 (ca2-exp2.2)
+Firmware: S3 Thermal + X3 BLE
+Date: 2026-05-06
+Test: Charging efficiency and EMI attenuation at 40mm wristband curvature, 5mm coil distance
+
+Configuration | Material | Curvature | Efficiency (5mm) | S21 Attenuation (dB) | Peak Temp | Notes
+---|---|---|---|---|---|---
+M1 | Rigid Ferrite Baseline | Flat (0mm) | 76.8% | -42.1 dB | 35.2°C | Reference from FY25
+M1 | Rigid Ferrite | 40mm radius | 68.4% | -39.8 dB | 36.1°C | Efficiency drop due to curvature
+M2 | Flexible Ferrite Composite | 40mm radius | 72.3% | -41.5 dB | 36.6°C | Best balance - meets ≥70%
+M3 | Segmented Rigid Tiles | 40mm radius | 75.1% | -40.9 dB | 36.4°C | Highest efficiency, good flexibility
+
+Detailed Test Runs:
+
+[10:15:00] M1-40mm Start | Input: 260mW | Output: 178mW | Eff: 68.5% | Atten: -39.8dB
+[10:18:22] M1-40mm End   | Avg Eff: 68.4% | Peak Temp: 36.1°C
+
+[10:25:00] M2-Flex Start | Input: 255mW | Output: 184mW | Eff: 72.2% | Atten: -41.5dB
+[10:28:45] M2-Flex Mid   | Input: 252mW | Output: 183mW | Eff: 72.6% 
+[10:32:10] M2-Flex End   | Avg Eff: 72.3% | Peak Temp: 36.6°C | 100-cycle bend test: PASS
+
+[10:40:00] M3-Seg Start  | Input: 258mW | Output: 194mW | Eff: 75.2% | Atten: -40.9dB
+[10:43:30] M3-Seg Mid    | Input: 255mW | Output: 191mW | Eff: 74.9%
+[10:47:15] M3-Seg End    | Avg Eff: 75.1% | Peak Temp: 36.4°C | Durability: PASS
+
+Summary:
+- M2 Flexible: Meets all targets (≥70% eff, good attenuation)
+- M3 Segmented: Superior efficiency, acceptable flexibility
+- Hypothesis B validated for both M2 and M3 at 40mm curvature
+
+=== End of Log ===
