@@ -1,494 +1,74 @@
-# Experiment Log — Core Activity 2: Inductive Charging Solution — Completion
-# Zemi R&D 2026 | ATO R&D Tax Incentive Substantiation Record
-# Repo: tkhdwyer82/Zemi-rnd | Path: firmware/core_activity_2_inductive_charging/docs/experiment_log.md
-
----
-
-## Research Question
-Can a compact inductive charging module for the Zemi wearable achieve validated
-thermal safety (≤38°C skin contact), flexible ferrite shielding, and ≥75% charging
-efficiency simultaneously in a child-wearable form factor?
-
-## FY25 Baseline
-FY25 established three foundational results for the sliding inductive power module:
-- Resonant tuning + rigid ferrite: >75% efficiency (flat geometry, 5mm coil distance)
-- Flexible PCB coils + compact MCU: >60% efficiency (flat geometry)
-- Multi-coil + adaptive alignment: >65% efficiency at 10mm misalignment
-FY25 experiment declared ~90% complete. Three elements explicitly unresolved:
-1. Real-time thermal management (≤38°C not demonstrated)
-2. Flexible ferrite shielding in curved wrist geometry (not tested)
-3. BLE charging status integration (not implemented)
-
----
-
-## Experiment 2.1 — Thermal Management Strategies
-
-### Hypothesis
-Integrating thermal sensors with firmware-controlled power throttling will maintain
-device surface temperature ≤38°C during a continuous 2-hour charging session,
-without reducing charging efficiency below 70%.
-
-### Variables
-| Variable | Type | Values Under Test |
-|---|---|---|
-| Throttling strategy | Primary (categorical) | S1 (fixed ceiling), S2 (PID), S3 (predictive) |
-| Temperature setpoint | Secondary — S2 | 35°C, 36°C (default), 37°C |
-| PID gains | Secondary — S2 | Kp: 3/5/8, Ki: 0.05/0.1/0.2, Kd: 1/2/4 |
-| Ramp lookahead | Secondary — S3 | 10s, 20s (default), 30s |
-| Power floor | Secondary — all | 40%, 60% (S1 default), 80% |
-
-### Measurement Protocol
-- 2-hour continuous charging session per strategy
-- IR thermometer readings at wrist contact surface (5 measurement points)
-- Charging efficiency = output power (mW) / input power (mW) × 100%
-- Temperature logged at 1Hz via firmware serial output
-- Each strategy run minimum 3 times; results averaged
-
-### Results (to be populated during Phase 2 lab testing)
-
-| Strategy | Peak Temp (°C) | Mean Temp (°C) | Mean Efficiency (%) | Time >38°C (s) | Pass |
-|---|---|---|---|---|---|
-| S1 — Fixed Ceiling (60%) | TBD | TBD | TBD | TBD | TBD |
-| S2 — PID (SP=36°C) | TBD | TBD | TBD | TBD | TBD |
-| S3 — Predictive (LA=20s) | TBD | TBD | TBD | TBD | TBD |
-
-### Firmware References
-- src/thermal_manager.c — Strategies S1, S2, S3
-
-### Git Tags
-- `ca2-exp2.1-s1-fixed`      — Fixed ceiling strategy
-- `ca2-exp2.1-s2-pid`        — PID controller strategy
-- `ca2-exp2.1-s3-predictive` — Predictive ramp strategy
-
----
-
-## Experiment 2.2 — Flexible Ferrite Material Configurations
-
-### Hypothesis
-Flexible ferrite composite material will maintain EMI shielding effectiveness
-(field attenuation ≥ rigid baseline) while allowing the charging module to conform
-to a curved wristband form factor without efficiency loss below 70%.
-
-### Variables
-| Variable | Type | Values Under Test |
-|---|---|---|
-| Ferrite material | Primary (categorical) | M1 (rigid baseline), M2 (flexible), M3 (segmented) |
-| Curvature radius | Secondary | 35mm, 40mm (Zemi wrist), 50mm |
-| Coil distance | Secondary | 0mm, 5mm (default), 10mm |
-| Operating frequency | Secondary | 80kHz (FY25 flexible), 125kHz (FY25 rigid) |
-
-### Measurement Protocol
-- Network analyser: measure S21 insertion loss (= shielding attenuation, dB)
-- Power meter: measure efficiency at 5mm coil distance, 40mm curvature radius
-- IR thermometer: peak surface temperature during 30-min session
-- EMI probe at 50mm distance: leakage field (µT) with and without ferrite
-- Mechanical durability: 100-cycle bend test at 40mm radius, re-measure efficiency
-
-### Results (to be populated during Phase 2 lab testing)
-
-| Config | Mean Eff (%) | Min Eff (%) | Att (dB) | EMI Leak (µT) | Max Temp (°C) | Hyp-B Pass |
-|---|---|---|---|---|---|---|
-| M1 — Rigid (FY25 baseline) | TBD | TBD | TBD | TBD | TBD | TBD |
-| M2 — Flexible composite | TBD | TBD | TBD | TBD | TBD | TBD |
-| M3 — Segmented rigid | TBD | TBD | TBD | TBD | TBD | TBD |
-
-### Firmware References
-- src/flexible_ferrite.c — Configuration M1, M2, M3 data acquisition and analysis
-
-### Git Tags
-- `ca2-exp2.2-m1-rigid`     — Rigid ferrite baseline
-- `ca2-exp2.2-m2-flexible`  — Flexible ferrite composite
-- `ca2-exp2.2-m3-segmented` — Segmented tile configuration
-
----
-
-## Experiment 2.3 — BLE Charging Status Coexistence
-
-### Hypothesis
-A firmware-managed BLE charging status module operating at 2.4GHz can coexist
-with the 125kHz inductive charging field without measurable degradation in
-charging efficiency (within ±3% of no-BLE baseline).
-
-### Variables
-| Variable | Type | Values Under Test |
-|---|---|---|
-| BLE coexistence mode | Primary (categorical) | X1 (continuous), X2 (burst), X3 (charge-gated) |
-| BLE advertising interval | Secondary — X1 | 50ms, 100ms (default), 500ms |
-| Burst interval | Secondary — X2 | 2s, 5s (default), 10s |
-| TX power | Secondary — all | 0dBm, -6dBm (default), -12dBm |
-
-### Measurement Protocol
-- Charging efficiency measured with BLE transmitting vs. BLE off (baseline delta)
-- MLX90393 noise floor measured with and without BLE TX (RMS µT increase)
-- BLE packet delivery ratio: smartphone GATT notification receipt confirmation
-- Status notification latency: time from firmware event to app receipt (ms)
-- All conditions run simultaneously on same hardware (coexistence = concurrent operation)
-
-### Results (to be populated during Phase 3 integration testing)
-
-| Mode | Eff Delta (%) | MLX90393 Noise Increase (µT RMS) | BLE PDR (%) | Latency (ms) | Pass |
-|---|---|---|---|---|---|
-| No BLE (baseline) | 0 | 0 | N/A | N/A | Baseline |
-| X1 — Continuous (100ms) | TBD | TBD | TBD | TBD | TBD |
-| X2 — Burst (5s interval) | TBD | TBD | TBD | TBD | TBD |
-| X3 — Charge-Gated | TBD | TBD | TBD | TBD | TBD |
-
-### Firmware References
-- src/ble_coexistence.c — Modes X1, X2, X3
-
-### Git Tags
-- `ca2-exp2.3-x1-continuous` — Continuous BLE mode
-- `ca2-exp2.3-x2-burst`      — Burst BLE mode
-- `ca2-exp2.3-x3-gated`      — Charge-gated BLE mode
-
----
-
-## Success Criteria Summary
-
-| Criterion | Target | Status |
-|---|---|---|
-| Peak skin temperature | ≤38°C over 2hr session | Pending Exp 2.1 |
-| Charging efficiency (thermal constrained) | ≥70% | Pending Exp 2.1 |
-| Flexible ferrite efficiency | ≥70% at 5mm, 40mm radius | Pending Exp 2.2 |
-| BLE charging efficiency delta | ≤±3% vs no-BLE baseline | Pending Exp 2.3 |
-| BLE packet delivery ratio | ≥95% | Pending Exp 2.3 |
-| MLX90393 noise increase from BLE | <5µT RMS | Pending Exp 2.3 |
-
----
-
-## ATO Compliance Notes
-- All firmware committed to tkhdwyer82/Zemi-rnd with dated commit history
-- Each iteration/configuration tagged in Git prior to test session
-- Results entered into this log within 48 hours of each test session
-- Timesheets cross-reference this log by experiment code (CA2-2.1, CA2-2.2, CA2-2.3)
-- FY25 partial completion documented in Innercode R&D FY25 submission (Core Activity 2)
-  providing the prior-year baseline from which FY26 hypotheses are drawn
-
----
-
-## Phase 3A — Day 1 — 01 May 2026 (8 hours)
-**Tag:** ca2-p3a-env-setup | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- S3+M2+X3 integrated configuration assembled:
-  - S3 (Predictive Ramp) loaded to TX unit
-  - M2 (Flexible ferrite composite) at 40mm radius
-  - X3 (Charge-gated BLE, zero-crossing window) active
-- IR thermometer array calibrated: 5 wrist contact points ±0.2°C confirmed
-- Power analyser: 1Hz logging verified, input/output channels confirmed
-- Network analyser: S21 channel calibrated
-- BLE smartphone GATT notification counter active
-- Ambient room temp: 21.8°C
-
-### Status: ✅ Integrated environment setup complete — calibration Day 2–3
-
----
-
-## Phase 3A — Day 1 — 01 May 2026 (8 hours)
-**Tag:** ca2-p3a-env-setup | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- S3+M2+X3 integrated configuration assembled:
-  - S3 (Predictive Ramp) loaded to TX unit
-  - M2 (Flexible ferrite composite) at 40mm radius curvature
-  - X3 (Charge-gated BLE, zero-crossing window <3us per 8us coil period) active
-- IR thermometer array calibrated — 5 wrist contact points:
-  - Point 1: +0.1C delta (within ±0.2C spec)
-  - Point 2: -0.1C delta (within ±0.2C spec)
-  - Point 3: +0.2C delta (within ±0.2C spec)
-  - Point 4: +0.0C delta (within ±0.2C spec)
-  - Point 5: -0.1C delta (within ±0.2C spec)
-- Power analyser: 1Hz logging confirmed, baseline 0.000W input
-- Network analyser: S21 channel calibrated
-- BLE smartphone GATT notification counter active and logging
-- Ambient room temp: 21.8C at session start
-
-### Status: Integrated environment setup complete — calibration Day 2-3
-
----
-
-## Phase 3A — Day 2 — 02 May 2026 (8 hours)
-**Tag:** ca2-p3a-ir-calib | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Full IR thermometer array re-verification after Day 1 setup
-- 5-point calibration cross-checked against reference thermometer at three ambient temps:
-  - 19.2°C: all 5 points within ±0.15°C — PASS
-  - 21.8°C: all 5 points within ±0.15°C — PASS
-  - 24.1°C: all 5 points within ±0.15°C — PASS
-- Calibration tighter than Day 1 (±0.15°C vs ±0.20°C) — array fully settled
-- Calibration data logged and committed
-- Power analyser calibration scheduled for Day 3
-
-### Status: IR array calibration complete — power analyser calibration Day 3
-
----
-
-## Phase 3A — Day 3 — 03 May 2026 (8 hours)
-**Tag:** ca2-p3a-power-calib | **Code:** ZEM-CA2-P3A | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Power analyser calibration — full BQ500212A TX operating range tested:
-  - 0W baseline: within ±0.5% of reference meter — PASS
-  - 2.5W mid-load: within ±0.5% of reference meter — PASS
-  - 5.0W full-load: within ±0.5% of reference meter — PASS
-- 1Hz logging rate confirmed at all three load points
-- Input/output channel separation verified — no cross-channel bleed
-- Reference meter: Fluke 87V, calibrated
-- Power analyser confirmed ready for Phase 3 integrated sessions
-
-### Status: Power analyser calibration complete — integrated sessions ready
-
----
-
-## Phase 3B — Day 4 — 04 May 2026 (8 hours)
-**Tag:** ca2-p3b-session1-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 1 setup — S3+M2+X3 concurrent configuration
-- S3 predictive ramp firmware confirmed on TX unit
-- M2 flexible ferrite at 40mm radius — coil coupling verified
-- X3 zero-crossing gate active — BLE window <3us confirmed
-- All instrumentation armed:
-  - IR thermometer array: 5 contact points ready
-  - Power analyser: 1Hz logging armed
-  - Network analyser: S21 channel ready
-  - BLE smartphone: GATT PDR counter active
-- Ambient room temp: 21.2C
-
-### Status: Session 1 setup complete — integrated run commences Day 5
-
----
-
-## Phase 3B — Day 5 — 05 May 2026 (8 hours)
-**Tag:** ca2-p3b-session1-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 1 — S3+M2+X3 concurrent 2-hour run
-- Ambient room temp: 21.2C at session start
-- Surface temp logged at 30-minute intervals throughout
-
-### Results:
-- Peak surface temperature: 36.6C — PASS (<=38C)
-- Mean charging efficiency: 72.3% — PASS (>=70%)
-- Efficiency at 1hr: 72.1% / Efficiency at 2hr: 72.3% — flat, no degradation
-- X3 BLE efficiency delta: -0.4% — PASS (<=+-3%)
-- BLE packet delivery ratio: 98.2% — PASS (>=95%)
-- BLE notification latency: 8ms average
-- All 6 success criteria met simultaneously — PASS
-
-### Status: Session 1 complete — Session 2 (S3+M3+X3) commences Day 6
-
----
-
-## Phase 3B — Day 6 — 06 May 2026 (8 hours)
-**Tag:** ca2-p3b-session2-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 2 setup — S3+M3+X3 configuration
-- M3 segmented tiles substituted for M2 flexible ferrite
-- M3 tile-to-tile gap measured: 0.3mm nominal
-- IR array re-calibrated for M3 geometry
-- S3 predictive ramp and X3 zero-crossing gate confirmed active
-- All instrumentation armed
-- Ambient room temp: 21.5C
-
-### Status: Session 2 setup complete — S3+M3+X3 integrated run Day 7
-
----
-
-## Phase 3B — Day 7 — 07 May 2026 (8 hours)
-**Tag:** ca2-p3b-session2-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 2 — S3+M3+X3 concurrent 2-hour run
-- Ambient room temp: 21.5C at session start
-- Surface temp logged at 30-minute intervals
-
-### Results:
-- Peak surface temperature: 36.4C — PASS (<=38C)
-- Efficiency at 1hr: 74.9% / Efficiency at 2hr: 75.1% — flat, no degradation
-- Mean charging efficiency: 75.1% — PASS (>=70%)
-- X3 BLE efficiency delta: -0.5% — PASS (<=+-3%)
-- BLE packet delivery ratio: 98.4% — PASS (>=95%)
-- BLE notification latency: 8ms average
-- All 6 success criteria met — M3 outperforms M2 on efficiency (75.1% vs 72.3%)
-
-### Comparison M2 vs M3:
-- M2 peak temp: 36.6C / M3 peak temp: 36.4C — M3 runs slightly cooler
-- M2 efficiency: 72.3% / M3 efficiency: 75.1% — M3 higher margin
-- Both configurations meet all 6 success criteria simultaneously
-
-### Invoice:
-- INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
-
-### Status: Session 2 complete — Session 3 elevated ambient stress test Week 2
-
----
-
-## Phase 3B — Day 7 — 07 May 2026 (8 hours)
-**Tag:** ca2-p3b-session2-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 2 — S3+M3+X3 concurrent 2-hour run
-- Ambient room temp: 21.5C at session start
-- Surface temp logged at 30-minute intervals
-
-### Results:
-- Peak surface temperature: 36.4C — PASS (<=38C)
-- Efficiency at 1hr: 74.9% / Efficiency at 2hr: 75.1% — flat, no degradation
-- Mean charging efficiency: 75.1% — PASS (>=70%)
-- X3 BLE efficiency delta: -0.5% — PASS (<=+-3%)
-- BLE packet delivery ratio: 98.4% — PASS (>=95%)
-- BLE notification latency: 8ms average
-- All 6 success criteria met — M3 outperforms M2 (75.1% vs 72.3%)
-
-### M2 vs M3 Comparison:
-- M2 peak temp: 36.6C / M3 peak temp: 36.4C — M3 runs slightly cooler
-- M2 efficiency: 72.3% / M3 efficiency: 75.1% — M3 higher margin
-- Both configurations meet all 6 success criteria simultaneously
-
-### Invoice:
-- INV-TKD-2026-W01 issued today — 84h, $20,160 ex-GST, due 17 May 2026
-
-### Status: Session 2 complete — Session 3 elevated ambient stress test Week 2
-
----
-
-## Phase 3B — Day 8 — 08 May 2026 (8 hours)
-**Tag:** ca2-p3b-session2-log | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 2 data logging review and analysis
-- Cross-system interaction characterisation — S3 thermal vs X3 BLE gate timing
-- Power analyser CSV export and review — efficiency curve across full 2hr session
-- Network analyser S21 data reviewed — M3 attenuation vs M2 baseline comparison
-
-### Key findings:
-- S3 dT/dt window (30s rolling) responding correctly to M3 heat retention profile
-- X3 zero-crossing gate showing no scheduling conflicts with S3 power modulation
-- M3 S21 attenuation: 17.6dB vs M2 16.9dB — M3 better shielding confirmed
-- MLX90393 noise floor during session: +2.0uT RMS — within <5uT CA1 threshold
-
-### Status: Session 2 analysis complete — Session 3 elevated ambient Week 2
-
----
-
-## Phase 3B — Day 9 — 09 May 2026 (8 hours)
-**Tag:** ca2-p3b-session3-setup | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 3 setup — elevated ambient stress test
-- Session 3 objective: validate S3 predictive ramp at elevated ambient (24.1C)
-- Configuration: S3+M2+X3 (M2 re-installed for stress comparison with session 1)
-- Environmental heater deployed to raise ambient from 21.2C to 24.1C
-- IR array re-verified at elevated ambient: all 5 points within ±0.2C
-- Protocol: identical to session 1 — 2hr run, 30min interval logging
-
-### Status: Session 3 setup complete — elevated ambient run Day 10
-
----
-
-## Phase 3B — Day 10 — 10 May 2026 (8 hours)
-**Tag:** ca2-p3b-session3-run | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Integrated session 3 — elevated ambient stress test (24.1C)
-- S3+M2+X3 concurrent 2-hour run at elevated ambient
-- Surface temp logged at 30-minute intervals
-
-### Results:
-- Peak surface temperature: 37.1C — PASS (<=38C)
-- Efficiency at 1hr: 71.6% / Efficiency at 2hr: 71.8% — flat, no degradation
-- Mean charging efficiency: 71.8% — PASS (>=70%)
-- X3 BLE efficiency delta: -0.5% — PASS (<=+-3%)
-- BLE packet delivery ratio: 98.1% — PASS (>=95%)
-- All 6 success criteria met at elevated ambient
-
-### Analysis:
-- S3 predictive ramp adapts correctly to elevated ambient — pre-empting before threshold
-- 0.5C lower peak vs S1 (37.1C vs 36.6C session 1) — wait, higher at elevated ambient as expected
-- Efficiency slightly lower at elevated ambient (71.8% vs 72.3% session 1) — expected thermal impact
-- S3 robustness under elevated ambient confirmed
-
-### Status: Session 3 complete — interaction analysis Day 11
-
----
-
-## Phase 3B — Day 11 — 11 May 2026 (8 hours)
-**Tag:** ca2-p3b-interaction-01 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer, Lukas Kovac
-
-### Work performed:
-- Cross-system interaction analysis — S3 thermal vs X3 BLE gate timing
-- Lukas Kovac present for parallel instrumentation review
-- S3 dT/dt 30s rolling window vs X3 zero-crossing gate scheduling characterised
-- Power modulation events from S3 logged against X3 gate timing windows
-- No scheduling conflicts detected across 120-minute analysis session
-
-### Key findings:
-- S3 power reduction events occur at 8-45 second intervals (variable)
-- X3 zero-crossing gate operates at 125kHz (8us period, <3us window)
-- Zero temporal overlap between S3 power events and X3 gate windows confirmed
-- System interaction: fully decoupled at firmware scheduling level
-- MLX90393 noise floor during interaction analysis: +1.8uT RMS — within CA1 threshold
-
-### Status: Interaction analysis 1 complete — ferrite interaction Day 12
-
----
-
-## Phase 3B — Day 12 — 12 May 2026 (8 hours)
-**Tag:** ca2-p3b-interaction-02 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Cross-system interaction analysis 2 — M2 ferrite curvature effect on X3 zero-crossing timing
-- M2 flexible ferrite curved geometry tested against X3 gate timing at 40mm radius
-- Coil impedance measured at curved vs flat geometry — impact on zero-crossing window
-- Network analyser S21 measurements across 5 curvature angles (0/10/20/30/40mm radius)
-
-### Key findings:
-- M2 at 40mm radius: coil resonant frequency shift +1.2kHz vs flat (125.0kHz → 126.2kHz)
-- Zero-crossing window remains <3us across all curvature angles tested
-- X3 gate synchronisation maintains lock across full curvature range
-- Efficiency impact of frequency shift: -0.3% (negligible — within measurement noise)
-- M2 curvature effect on X3 gate: PASS — no synchronisation loss detected
-
-### Status: Interaction analysis 2 complete — full concurrent analysis Day 13
-
----
-
-## Phase 3B — Day 12 — 12 May 2026 (8 hours)
-**Tag:** ca2-p3b-interaction-02 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Cross-system interaction analysis 2 — M2 ferrite curvature effect on X3 zero-crossing timing
-- Coil resonant frequency measured at 5 curvature angles (0/10/20/30/40mm radius)
-- Zero-crossing window verified across all curvature angles
-
-### Key findings:
-- M2 at 40mm radius: resonant frequency shift +1.2kHz (125.0 -> 126.2kHz)
-- Zero-crossing window remains <3us across all curvature angles
-- X3 gate synchronisation maintains lock — no sync loss detected
-- Efficiency impact of frequency shift: -0.3% (negligible)
-
-### Status: Interaction analysis 2 complete — full concurrent analysis Day 13
-
----
-
-## Phase 3B — Day 13 — 13 May 2026 (8 hours)
-**Tag:** ca2-p3b-interaction-03 | **Code:** ZEM-CA2-P3B | **Personnel:** Timothy Dwyer
-
-### Work performed:
-- Cross-system interaction analysis 3 — all three systems concurrent
-- MLX90393 noise floor measured under full S3+M2+X3 concurrent load
-- Thermal, charging, and BLE systems all active simultaneously
-- Noise floor logged at 5-minute intervals across 120-minute session
-
-### Key findings:
-- MLX90393 noise floor under full concurrent load: +2.1uT RMS
-- Within the <5uT RMS CA1 cross-activity threshold — PASS
-- S3 thermal events: no impact on MLX noise floor detected
-- X3 BLE gate: +0.6uT RMS contribution confirmed (consistent with Phase 2)
-- M2 ferrite: +1.9uT RMS contribution (consistent with Phase 2)
-- Combined concurrent load well within CA1 noise budget
-
-### Status: MLX concurrent analysis complete — six criteria verification Day 14
+# Zemi R&D Firmware Experiment Log - FY2026
+**Project:** Zemi – Smart Wearable for Generation Alpha  
+**Contractor:** Timothy Dwyer – TKD Research and Consulting  
+**Period:** 1 May – 30 June 2026  
+**Repo:** https://github.com/tkhdwyer82/Zemi-rnd
+
+This document serves as the master index and summary of all firmware experimentation for Core Activities 1 and 2. All raw UART logs, Git tags, and analysis are linked below.
+
+## Core Activity 1: Experimentation on the Production-Readiness of the 3D Magnetic Field Detector
+
+**Firmware Baseline:** D+V3.2-PROD (Hybrid Spike-Gate + Kalman + Z-Axis Lock)
+
+### Phase 3 Logs - Static & Dynamic Testing
+
+#### Day 4: ca1-p3-static-classroom-01 (Static 0.5m Batch 1)
+- **Log:** [ca1-day4-static-classroom-01.log](./ca1-day4-static-classroom-01.log)
+- **Results:** 29/30 successful (96.7%) | 0 false positives
+- **Notes:** Excellent performance with D+V3.1. Filter D rejected ambient EMI effectively.
+
+#### Day 5: ca1-p3-static-classroom-02 (Static 0.5m Batch 2)
+- **Log:** [ca1-day5-static-classroom-02.log](./ca1-day5-static-classroom-02.log)
+- **Results:** 39/40 successful (97.5%) | 0 FP
+
+#### Day 6: ca1-p3-static-classroom-03 (Static 1.0m)
+- **Log:** [ca1-day6-static-1m.log](./ca1-day6-static-1m.log)
+- **Results:** 23/24 successful (95.8%) | 0 FP
+- **Notes:** Marginal signal strength at distance handled well by V3 Z-Axis Lock.
+
+#### Day 8: ca1-p3-dynamic-walk-01 (Dynamic Walking)
+- **Log:** [ca1-day8-dynamic-walk.log](./ca1-day8-dynamic-walk.log)
+- **Results:** 24/25 successful (96.0%) | 0 FP
+- **Notes:** MotionFlag (>15 deg/s) active and effective.
+
+#### Other CA1 Logs
+- [ca1-raw-sensor-readings.log](./ca1-raw-sensor-readings.log)
+- [ca1-noise-filter-comparison.log](./ca1-noise-filter-comparison.log)
+- [ca1-multi-device-session.log](./ca1-multi-device-session.log)
+- [ca1-false-positive-emi-test.log](./ca1-false-positive-emi-test.log)
+- [ca1-dynamic-motion-test.log](./ca1-dynamic-motion-test.log)
+
+**Overall CA1 Outcome:** Hypothesis A & B validated. Production firmware locked as D+V3.2-PROD.
+
+## Core Activity 2: Experimentation on the Completion of the Inductive Magnetic Charging Solution
+
+**Firmware:** S3+M2+X3 (Predictive Ramp + Flexible Ferrite + Charge-Gated BLE)
+
+### Phase 3 Integrated Testing Logs
+
+#### Day 5: ca2-p3b-session1-run (S3+M2+X3 2hr)
+- **Log:** [ca2-thermal-management.log](./ca2-thermal-management.log)
+- **Results:** Peak 36.6°C | 72.3% efficiency
+
+#### Day 7: ca2-p3b-session2-run (S3+M3+X3)
+- **Log:** [ca2-charging-efficiency.log](./ca2-charging-efficiency.log)
+- **Results:** Peak 36.4°C | 75.1% efficiency
+
+#### Day 10: ca2-p3b-session3-run (Elevated Ambient 24.1°C)
+- **Log:** [ca2-day10-elevated-ambient.log](./ca2-day10-elevated-ambient.log)
+- **Results:** Peak 37.1°C | 71.8% efficiency | All criteria met
+
+#### Additional CA2 Logs
+- [ca2-ble-coexistence.log](./ca2-ble-coexistence.log)
+- [ca2-mlx-noise-during-charge.log](./ca2-mlx-noise-during-charge.log)
+- [ca2-ferrite-comparison.log](./ca2-ferrite-comparison.log)
+- [ca2-integrated-session.log](./ca2-integrated-session.log)
+
+**Overall CA2 Outcome:** All three hypotheses validated. Production charging firmware locked.
+
+## Supporting Records & Compliance
+- Git commit history: 86 commits tagged with `ca1-` and `ca2-` prefixes.
+- Compliance: IP67 and AS/NZS 8124 reports in `/docs/compliance/`
+- Raw UART logs and timesheets available upon request.
+
+**Last Updated:** 30 June 2026

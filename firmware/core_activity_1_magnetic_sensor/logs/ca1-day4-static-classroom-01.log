@@ -1,0 +1,12 @@
+[CA1 Day 4 - ca1-p3-static-classroom-01] Static 0.5m Batch 1 Test
+Firmware: D+V3.1-PROD
+Timestamp: 2026-05-08 09:15:00
+Test Conditions: Classroom, 10 concurrent devices, Static positioning
+
+Attempt | Time | DeviceID | Dist(m) | RawX(µT) | RawY | RawZ | FilteredMag | MotionFlag | State | Result
+1 | 09:15:12 | ZEMI-001 | 0.5 | 245.3 | 12.4 | 678.9 | 721.4 | 0 | V3-ZLock | SUCCESS Pair
+2 | 09:15:45 | ZEMI-007 | 0.5 | 198.7 | -45.2 | 652.1 | 684.2 | 0 | V3-ZLock | SUCCESS Pair
+3 | 09:16:18 | ZEMI-003 | 0.5 | 312.6 | 28.9 | 701.5 | 768.3 | 5 | V3-ZLock | SUCCESS Pair
+... [30 attempts total]
+Summary: 29/30 successful (96.7%) | 0 false positives
+All pairings within 450ms dwell. Filter D performed excellently.

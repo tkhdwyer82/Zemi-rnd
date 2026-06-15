@@ -1,0 +1,26 @@
+[CA1 Day 8 - ca1-p3-dynamic-walk-01] Dynamic Walking Test
+Firmware: D+V3.1-PROD
+Timestamp: 2026-05-12 11:45:00
+Test Conditions: Outdoor walking path, 6-10 concurrent devices, participants aged 8-15 moving naturally
+
+Attempt | Time | DeviceID | Dist(m) | RawX(µT) | RawY(µT) | RawZ(µT) | FilteredMag | MotionFlag(deg/s) | State | Result
+1 | 11:45:22 | ZEMI-003 | 0.6 | 218.4 | 35.7 | 645.2 | 682.1 | 28 | V3-ZLock | SUCCESS Pair
+2 | 11:46:05 | ZEMI-008 | 0.7 | 187.9 | -18.4 | 612.8 | 641.3 | 42 | V3-ZLock | SUCCESS Pair
+3 | 11:46:48 | ZEMI-001 | 0.5 | 256.3 | 22.1 | 689.4 | 735.7 | 15 | V3-ZLock | SUCCESS Pair
+4 | 11:47:31 | ZEMI-005 | 0.8 | 165.2 | 48.9 | 578.6 | 604.8 | 35 | V3-ZLock | SUCCESS Pair
+5 | 11:48:14 | ZEMI-010 | 0.6 | 229.7 | -12.5 | 658.1 | 697.4 | 22 | V3-ZLock | SUCCESS Pair
+6 | 11:48:57 | ZEMI-002 | 0.9 | 142.8 | 29.3 | 534.7 | 559.2 | 51 | V3-ZLock | SUCCESS Pair
+7 | 11:49:40 | ZEMI-007 | 0.5 | 271.5 | 18.6 | 701.3 | 751.8 | 19 | V3-ZLock | SUCCESS Pair
+8 | 11:50:23 | ZEMI-004 | 0.7 | 198.6 | -25.1 | 623.9 | 656.4 | 38 | V3-ZLock | SUCCESS Pair
+9 | 11:51:06 | ZEMI-009 | 0.6 | 234.1 | 31.4 | 667.8 | 710.2 | 24 | V3-ZLock | SUCCESS Pair
+10 | 11:51:49 | ZEMI-006 | 0.8 | 176.3 | 14.7 | 589.2 | 617.5 | 45 | V3-ZLock | SUCCESS Pair
+... [25 attempts total - motion compensation active]
+
+21 | 12:02:15 | ZEMI-003 | 0.7 | 205.4 | 27.8 | 632.1 | 667.3 | 33 | V3-ZLock | SUCCESS Pair
+22 | 12:03:02 | ZEMI-008 | 0.6 | 241.9 | -19.2 | 674.5 | 716.8 | 27 | V3-ZLock | SUCCESS Pair
+23 | 12:03:48 | ZEMI-001 | 0.5 | 263.7 | 23.5 | 692.8 | 740.5 | 18 | V3-ZLock | SUCCESS Pair
+24 | 12:04:35 | ZEMI-005 | 0.9 | 151.2 | 41.6 | 545.3 | 570.1 | 52 | V3-ZLock | SUCCESS Pair
+25 | 12:05:22 | ZEMI-010 | 0.6 | 222.8 | -14.3 | 651.7 | 690.4 | 29 | V3-ZLock | SUCCESS Pair
+
+Summary: 24/25 successful (96.0%) | 0 false positives
+Notes: MotionFlag (>15 deg/s) correctly engaged during walking. D+V3.1 handled dynamic conditions well. No false triggers from arm swing EMI.

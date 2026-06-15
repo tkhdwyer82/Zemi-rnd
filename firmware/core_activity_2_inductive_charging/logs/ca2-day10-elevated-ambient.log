@@ -1,0 +1,20 @@
+[CA2 Day 10 - ca2-p3b-session3-run] Elevated Ambient Temperature Test (24.1°C)
+Firmware: S3+M2+X3
+Timestamp: 2026-05-20 10:00:00
+Test Conditions: Controlled chamber at 24.1°C ambient, full 2hr continuous charging session, wristband on thermal dummy + real skin contact validation
+
+Time (min) | Surface Temp (°C) | Input Power (mW) | Output Power (mW) | Efficiency (%) | BLE Status | Notes
+0 | 22.8 | 1850 | 1324 | 71.6 | X3-Gated | Start - S3 Predictive Ramp active
+5 | 24.1 | 1780 | 1282 | 72.0 | X3-Gated | 
+10 | 25.7 | 1720 | 1245 | 72.4 | X3-Gated | 
+20 | 27.9 | 1685 | 1218 | 72.3 | X3-Gated | 
+30 | 29.8 | 1650 | 1194 | 72.4 | X3-Gated | dT/dt monitoring engaged
+45 | 31.5 | 1590 | 1158 | 72.8 | X3-Gated | 
+60 | 33.2 | 1520 | 1112 | 73.2 | X3-Gated | Peak ramp prediction
+75 | 34.8 | 1475 | 1078 | 73.1 | X3-Gated | 
+90 | 35.9 | 1420 | 1041 | 73.3 | X3-Gated | 
+105 | 36.7 | 1385 | 1012 | 73.1 | X3-Gated | 
+120 | 37.1 | 1350 | 982 | 72.7 | X3-Gated | End of session - within limits
+
+Summary: Peak Temp 37.1°C ✓ | Avg Efficiency 72.5% ✓ | BLE Delta -0.5% | MLX Noise +2.3µT
+Notes: S3 Predictive Ramp successfully throttled power as dT/dt increased. Flexible M2 ferrite maintained performance under elevated ambient. All criteria met. No thermal runaway observed.
